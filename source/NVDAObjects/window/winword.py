@@ -38,6 +38,7 @@ from cursorManager import CursorManager, ReviewCursorManager
 from tableUtils import HeaderCellInfo, HeaderCellTracker
 from . import Window
 from ..behaviors import EditableTextWithoutAutoSelectDetection
+from . import excelChart
  
 #Word constants
 
@@ -128,6 +129,7 @@ wdContentControlBuildingBlockGallery=5
 wdContentControlDate=6
 wdContentControlGroup=7
 wdContentControlCheckBox=8
+wdInlineShapeChart=12
 
 wdNoRevision=0
 wdRevisionInsert=1
@@ -310,6 +312,20 @@ class WordDocumentRevisionQuickNavItem(WordDocumentCollectionQuickNavItem):
 		text=(self.collectionItem.range.text or "")[:100]
 		return _(u"{revisionType}: {text} by {author} on {date}").format(revisionType=revisionType,author=author,text=text,date=date)
 
+class WordDocumentChartQuickNavItem(WordDocumentCollectionQuickNavItem):
+	@property
+	def label(self):
+		text=""
+		if self.collectionItem.Chart.HasTitle:
+			text=self.collectionItem.Chart.ChartTitle.Text
+		return _(u"{text}").format(text=text)
+
+	def moveTo(self):
+		log.io("\nCOUNT\t"+str(self.collectionItem.Chart.SeriesCollection().Count)+"\n")
+		self.collectionItem.Chart.Select()
+ 		chartNVDAObj = WordChart(windowHandle=self.document.rootNVDAObject.windowHandle, wordApplicationObject=self.rangeObj.Document.Application, wordChartObject=self.collectionItem.Chart)
+ 		eventHandler.queueEvent("gainFocus",chartNVDAObj)
+	
 class WinWordCollectionQuicknavIterator(object):
 	"""
 	Allows iterating over an MS Word collection (e.g. HyperLinks) emitting L{QuickNavItem} objects.
@@ -397,6 +413,13 @@ class TableWinWordCollectionQuicknavIterator(WinWordCollectionQuicknavIterator):
 		return rangeObj.tables
 	def filter(self,item):
 		return item.borders.enable
+
+class ChartWinWordCollectionQuicknavIterator(WinWordCollectionQuicknavIterator):
+	quickNavItemClass=WordDocumentChartQuickNavItem
+	def collectionFromRange(self,rangeObj):
+		return rangeObj.inlineShapes
+	def filter(self,item):
+		return item.type==12
 
 class WordDocumentTextInfo(textInfos.TextInfo):
 
@@ -527,6 +550,8 @@ class WordDocumentTextInfo(textInfos.TextInfo):
 			role=controlTypes.ROLE_ENDNOTE
 		elif role=="graphic":
 			role=controlTypes.ROLE_GRAPHIC
+		elif role=="chart":
+			role=controlTypes.ROLE_CHART
 		elif role=="object":
 			progid=field.get("progid")
 			if progid and progid.startswith("Equation.DSMT"):
@@ -859,6 +884,8 @@ class WordDocumentTreeInterceptor(browseMode.BrowseModeDocumentTreeInterceptor):
 			 return GraphicWinWordCollectionQuicknavIterator(nodeType,self,direction,rangeObj,includeCurrent).iterate()
 		elif nodeType.startswith('heading'):
 			return self._iterHeadings(nodeType,direction,rangeObj,includeCurrent)
+		elif nodeType=="chart":
+			return ChartWinWordCollectionQuicknavIterator(nodeType,self,direction,rangeObj,includeCurrent).iterate()
 		else:
 			raise NotImplementedError
 
@@ -908,6 +935,14 @@ class WordDocument(EditableTextWithoutAutoSelectDetection, Window):
 
 	def __init__(self,*args,**kwargs):
 		super(WordDocument,self).__init__(*args,**kwargs)
+
+# 	def event_gainFocus(self):
+# 		log.io("\n"+str(self.WinwordApplicationObject.Selection.InlineShapes.Count)+"\n")
+# 		if self.WinwordApplicationObject.Selection.InlineShapes.Count > 0:
+# 			if self.WinwordApplicationObject.Selection.InlineShapes(1).Type == wdInlineShapeChart:
+# 				chartObj=WordChart(windowHandle=self.windowHandle,wordApplicationObject=self.WinwordApplicationObject,wordChartObject=self.WinwordApplicationObject.Selection.InlineShapes(1).Chart)
+# 				eventHandler.executeEvent('gainFocus',chartObj)
+# 		super(WordDocument,self).event_gainFocus()
 
 	def event_caret(self):
 		curSelectionPos=self.makeTextInfo(textInfos.POSITION_SELECTION)
@@ -1431,4 +1466,107 @@ class ElementsListDialog(browseMode.ElementsListDialog):
 		# Translators: The label of a radio button to select the type of element
 		# in the browse mode Elements List dialog.
 		("annotation", _("&Annotations")),
+		# Translators: The label of a radio button to select the type of element
+		# in the browse mode Elements List dialog.
+		("chart", _("&Charts")),
+
 	)
+
+class WordChart(Window):
+	def __init__(self,windowHandle, wordApplicationObject, wordChartObject):
+		self.windowHandle=windowHandle
+		self.wordApplicationObject=wordApplicationObject
+		self.wordChartObject=wordChartObject
+		super(WordChart,self).__init__(windowHandle=windowHandle)
+
+	def _get_name(self):
+		if self.wordChartObject.HasTitle:
+			name=self.wordChartObject.ChartTitle.Text
+		else:
+			name=self.wordChartObject.Name
+		#find the type of the chart
+		chartType = self.wordChartObject.ChartType
+		chartTypeText = excelChart.chartTypeDict.get(chartType,
+			# Translators: Reported when the type of a chart is not known.
+			_("unknown"))
+		# Translators: Message reporting the title and type of a chart.
+		return _("Chart title: {chartTitle}, type: {chartType}").format(chartTitle=name, chartType=chartTypeText)
+
+	def _get_title(self):
+		try:
+			title=self.wordChartObject.ChartTitle.Text
+		except COMError:
+			title=None
+		return title
+
+	def _get_role(self):
+		return controlTypes.ROLE_CHART 
+
+	def event_gainFocus(self):
+		ui.message(self.name)
+		self.reportSeriesSummary()
+  
+	def reportSeriesSummary(self ):
+		count = self.wordChartObject.SeriesCollection().count
+		if count>0:
+			if count == 1:
+				# Translators: Indicates that there is 1 series in a chart.
+				seriesValueString = _( "There is 1 series in this chart" )
+			else:
+				# Translators: Indicates the number of series in a chart where there are multiple series.
+				seriesValueString = _( "There are total %d series in this chart" ) %(count)
+ 
+			for i in xrange(1, count+1):
+				# Translators: Specifies the number and name of a series when listing series in a chart.
+				seriesValueString += ", " + _("series {number} {name}").format(number=i, name=self.wordChartObject.SeriesCollection(i).Name)
+			text = seriesValueString	
+		else:
+			# Translators: Indicates that there are no series in a chart.
+			text=_("No Series defined.")
+		ui.message(text)
+
+	def script_reportTitle(self,gesture):
+		ui.message (self._get_name())
+	script_reportTitle.canPropagate=True
+
+	def reportAxisTitle(self, axisType):
+		axis=None
+		if self.wordChartObject.HasAxis(axisType, excelChart.xlPrimary):
+			axis = self.wordChartObject.Axes(axisType, excelChart.xlPrimary)
+		# Translators: Reported when there is no title for an axis in a chart.
+		axisTitle = axis.AxisTitle.Text if axis and axis.HasTitle else _("Not defined")
+		axisName = (
+			# Translators: A type of axis in a chart.
+			_( "Category" ) if axisType==excelChart.xlCategory
+			# Translators: A type of axis in a chart.
+			else _( "Value" ) if axisType==excelChart.xlValue
+			# Translators: A type of axis in a chart.
+			else _( "Series" ))
+		# Translators: Message reporting the type and title of an axis in a chart.
+		# For example, this might report "Category axis is month"
+		text=_("{axisName} Axis is {axisTitle}").format(axisName=axisName, axisTitle=axisTitle)
+		ui.message(text)
+
+	def script_reportCategoryAxis(self, gesture):
+		self.reportAxisTitle(excelChart.xlCategory)
+	script_reportCategoryAxis.canPropagate=True
+
+	def script_reportValueAxis(self, gesture):
+		self.reportAxisTitle(excelChart.xlValue)
+	script_reportValueAxis.canPropagate=True
+
+	def script_reportSeriesAxis(self, gesture):
+		self.reportAxisTitle(excelChart.xlSeriesAxis)
+	script_reportSeriesAxis.canPropagate=True
+
+	def script_reportSeriesSummary(self, gesture):
+		self.reportSeriesSummary()
+	script_reportSeriesSummary.canPropagate=True
+
+	__gestures = {
+		"kb:NVDA+t" : "reportTitle",
+		"kb:NVDA+shift+1" : "reportCategoryAxis",
+		"kb:NVDA+shift+2" : "reportValueAxis",
+		"kb:NVDA+shift+3" : "reportSeriesAxis",
+		"kb:NVDA+shift+4" : "reportSeriesSummary",
+	}
