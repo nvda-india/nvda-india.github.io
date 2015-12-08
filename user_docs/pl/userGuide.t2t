@@ -1,0 +1,2183 @@
+﻿Podręcznik Użytkownika - NVDA NVDA_VERSION
+Podręcznik Użytkownika - NVDA NVDA_VERSION
+
+
+%!includeconf: ../userGuide.t2tconf
+%kc:title: Skróty Poleceń klawiszowych NVDA NVDA_VERSION
+
+= Spis treści =[toc]
+%%toc
+
++ Wprowadzenie +
+NonVisual Desktop Access (NVDA) to darmowy i wolny czytnik ekranu dla systemu operacyjnego Microsoft Windows. 
+Odczytując zawartość ekranu mową syntetyczną lub prezentując ją na monitorze brajlowskim, program pozwala osobom niewidomym i niedowidzącym korzystać z komputera bez ponoszenia większych kosztów niż osoby widzące. 
+NVDA rozwijany jest przez organizację [NV Access http://www.nvaccess.org/], oraz społeczność użytkowników.
+
+++ Cechy ogólne ++
+NVDA pozwala osobom niewidomym korzystać z systemu operacyjnego MS Windows, a także dużej liczby rozmaitych programów działających pod kontrolą tego systemu. 
+
+Najważniejsze właściwości NVDA to:
+- Wsparcie popularnych aplikacji takich jak przeglądarki internetowe, klienty poczty, komunikatory internetowe, pakiety biurowe
+- Wbudowany Syntezator mowy obsługujący ponad 80 języków
+- Ogłaszanie formatowania tekstu, jeśli jest dostępne, takiego jak nazwa i rozmiar czcionki, styl oraz błędy ortograficzne
+- Automatyczne ogłaszanie tekstu znajdującego się pod myszką oraz opcjonalna dźwiękowa sygnalizacja pozycji myszki.
+- Wsparcie dla wielu monitorów Brajlowskich uwzględniające możliwość wprowadzania tekstu na monitorach z klawiaturą brajlowską
+- Możliwość uruchamiania z pamięci USB lub innych nośników przenośnych bez konieczności instalacji
+- Łatwy w użyciu udźwiękowiony instalator
+- Tłumaczenie na 47 języków
+- Wsparcie dla współczesnych systemów operacyjnych Windows, zarówno 32 jak i 64 bitowych
+- Możliwość dostępu do ekranu logowania w systemie oraz innych zabezpieczonych ekranów.
+- Wsparcie dla wspólnych interfejsów dostępności, takich jak Microsoft Active Accessibility, Java Access Bridge, iAccessible2, UI Automation. UI Automation jest obsługiwany tylko pod kontrolą systemów Windows 7 i wyższych.
+- Wsparcie dla wiersza poleceń systemu Windows i aplikacji konsolowych.
+-
+
+++ Wersje Językowe ++
+Ważne jest, by ludzie z całego świata, bez względu na ojczysty język, mogli mieć równy dostęp do technologii.
+Poza angielskim, NVDA został przetłumaczony na 47 języków, w tym: afrykanerski, albański, amharski, arabski, aragoński, bułgarski, chiński tradycyjny i uproszczony, chorwacki, czeski, duński, fiński, francuski, galicyjski, grecki,   gruziński, hebrajski, hindi,  hiszpański, hiszpański kolumbijski, holenderski,  irlandzki, islandzki,  japoński, kataloński, koreański, mandaryński, nepalski, niemiecki, norweski, pendżabski, perski, polski, portugalski, portugalski brazylijski, rosyjski, rumuński,  serbski, słowacki, słoweński, szwedzki, tajski, tamilski, turecki, ukraiński, węgierski, wietnamski i włoski.
+
+++ Obsługa Syntezatora Mowy ++
+NVDA oferuje wiele wersji językowych interfejsu i daje możliwość odczytywania treści w każdym języku wspieranym przez zainstalowany w systemie syntezator mowy.
+
+Podstawowym, dołączonym do programu syntezatorem mowy jest darmowy wielojęzyczny syntezator [eSpeak http://espeak.sourceforge.net/], który jest wolnym oprogramowaniem.
+
+Informacje o innych syntezatorach mowy, które obsługuje NVDA można znaleźć w rozdziale [Obsługiwane syntezatory mowy #SupportedSpeechSynths].
+
+++ Obsługa Brajla ++
+Użytkownicy, którzy posiadają monitor brajlowski, mogą za pomocą NVDA odczytywać w brajlu informacje z ekranu. 
+Zobacz więcej informacji na temat obsługiwanych monitorów brajlowskich w rozdziale [Obsługiwane Monitory Brajlowskie #SupportedBrailleDisplays].
+
+NVDA obsługuje kody Brajla dla wielu języków, w tym brajl zwykły, skróty brajlowskie i brajl komputerowy .
+
+++ Licencja i Prawa Autorskie ++
+NVDA copyright NVDA_COPYRIGHT_YEARS autorzy NVDA.
+
+NVDA jest objęty przez GNU General Public License (wersja 2). 
+Możesz za darmo udostępniać ten program i dowolnie zmieniać go, pod warunkiem, że dołączysz do niego tę licencję oraz udostępnisz pełny kod źródłowy każdemu zainteresowanemu. 
+Dotyczy to zarówno oryginalnej wersji programu, jak i jego zmienionych kopii, a także każdego innego oprogramowania, które korzysta z kodu zaczerpniętego z tego programu. 
+Dokładne brzmienie licencji znajdziesz online: [Pełna treść licencji. http://www.gnu.org/licenses/old-licenses/gpl-2.0.html]
+
++ Wymagania Systemowe +
+- Systemy operacyjne: wsparcie wszystkich 32-bitowych i 64-bitowych wersji systemu Windows XP, Windows Vista, Windows 7, Windows 8 i Windows 10 (w tym systemów operacyjnych dla serwerów).
+ - Dla 32-bitowego Windows XP, NVDA wymaga Service Pack 2 lub wyższego.
+ - Dla Windows Server 2003, NVDA wymaga Service Pack 1 lub wyższego.
+- Pamięć operacyjna: przynajmniej 256 MB
+- Procesor: częstotliwość przynajmniej 1.0 GHz
+- Około 50 MB wolnego miejsca na dysku.
+-
+
++ Pobieranie i instalacja NVDA +
+Program NVDA można pobrać ze strony internetowej znajdującej sie pod adresem: [www.nvaccess.org NVDA_URL].
+
+Przejdź na stronie do sekcji "Download" gdzie znajduje się link do najnowszej wersji programu. Możesz udać się także na polską stronę społeczności nvda pod adresem www.nvda.pl
+
+Uruchomienie pobranego pliku spowoduje start tymczasowej kopii programu. 
+Na tym etapie możesz zdecydować czy chcesz zainstalować program na dysku, utworzyć jego kopię przenośną i umieścić ją np w pamięci flash czy kontynuować użycie wersji tymczasowej.
+
+Jeśli na aktualnym komputerze planujesz zawsze używać NVDA, prawdopodobnie najlepszym wyjściem będzie instalacja programu w systemie.
+Zainstalowana wersja umożliwia dostęp do funkcjonalności nieobecnych w kopii tymczasowej takich jak start wraz z systemem, dostęp do UAC i ekranów logowania. Po instalacji na twoim pulpicie i w menu start zostaną także utworzone skróty umożliwiające szybkie uruchomienie screenreadera.
+Przy pomocy zainstalowanej wersji będziesz mógł/mogła również utworzyć przenośną kopię programu w dowolnym momencie. 
+
+Jeśli chcesz nosić NVDA ze sobą na Pen Drive lub innym zapisywalnym nośniku, powinieneś wybrać utworzenie kopii przenośnej.
+Kopia przenośna umożliwia również instalację NVDA na dowolnym komputerze w późniejszym czasie.
+Jeżeli jednak chcesz skopiować NVDA na nośnik tylko do odczytu, taki jak płyta CD, powinieneś skopiować sam pakiet instalacyjny.
+Uruchomienie wersji przenośnej z nośnika tylko do odczytu, nie jest w tym momencie obsługiwane.
+
+Kontynuowanie używania wersji tymczasowej może być przydatne do przedstawienia innej osobie możliwości programu. Uruchamianie pliku instalacyjnego za każdym razem może jednak zabierać mnóstwo czasu.
+
+++ Ograniczenia kopii przenośnej i tymczasowej ++
+Poza brakiem możliwości automatycznego startu po zalogowaniu do systemu, przenośna i tymczasowa kopia NVDA posiada następujące ograniczenia:
+- Brak obsługi aplikacji uruchomionych z prawami administratora, chyba że NVDA również został uruchomiony z takimi uprawnieniami (niezalecane).
+- Brak odczytu ekranu kontroli konta użytkownika, podczas uruchamiania programu z uprawnieniami administratora.
+- Windows 8: brak obsługi ekranu dotykowego.
+- Windows 8: brak trybu czytania i wypowiadania wpisywanych znaków w aplikacjach Windows Store.
+-
+
+++ Instalacja NVDA ++
+Jeśli chcesz zainstalować NVDA bezpośrednio po uruchomieniu pobranego pakietu, naciśnij po prostu przycisk "zainstaluj nvda". 
+Jeśli okno pakietu zostało zamknięte, albo uruchamiasz NVDA z wersji przenośnej, kliknij polecenie Zainstaluj NVDA, dostępne w menu narzędzia w menu programu.
+
+Okno dialogowe, które się pojawi, wyświetli pytanie o to czy na pewno chcesz zainstalować program, oraz będzie zawierać informację czy ta instalacja zaktualizuje istniejącą kopię NVDA.
+Naciśnięcie przycisku "kontynuuj" spowoduje uruchomienie procedury instalacji. 
+Na tym etapie jest do wyboru kilka opcji, opisanych poniżej.
+Po pomyślnej instalacji wyświetlony zostanie odpowiedni komunikat. 
+Po wciśnięciu przycisku ok, nastąpi uruchomienie zainstalowanej właśnie kopii programu.
+
++++ Uruchamiaj NVDA na ekranie logowania +++
+Ta opcja pozwala określić, czy NVDA ma uruchamiać się na ekranie logowania do systemu Windows, zanim jeszcze wprowadzono hasło.
+Dotyczy to również ekranów bezpiecznego pulpitu, oraz kontroli konta użytkownika.
+
++++ Utwórz skrót na pulpicie (ctrl+alt+d) +++
+Ta opcja pozwala określić, czy NVDA ma utworzyć na pulpicie skrót uruchamiający program.
+Jeśli tak, to ze skrótem powiązany zostanie klawisz skrótu Ctrl+Alt+D.
+
++++ Skopiuj konfigurację przenośną do konta aktualnego użytkownika +++
+Ta opcja pozwala określić, czy NVDA powinien skopiować aktualnie używaną konfigurację jako ustawienia aktualnie zalogowanego użytkownika dla wykonywanej instalacji.
+Nie spowoduje to skopiowania konfiguracji dla innych użytkowników systemu, ani konfiguracji używanej na ekranie logowania i innych bezpiecznych ekranach.
+Ta opcja jest dostępna tylko podczas instalacji z kopii przenośnej, nie pojawi się przy instalacji z pobranego pakietu.
+
+++ Tworzenie kopii przenośnej ++
+Jeśli chcesz utworzyć kopię przenośną programu bezpośrednio z pobranego pakietu, naciśnij przycisk "utwórz kopię przenośną". 
+Jeśli okno pakietu zostało zamknięte lub korzystasz z już zainstalowanej wersji, wybierz polecenie utwórz kopię przenośną w menu narzędzia w menu NVDA.
+
+Pojawi się okno, pozwalające wybrać katalog w którym wersja przenośna ma zostać umieszczona. 
+Może to być dowolna lokalizacja na dysku twardym, lub na dysku zewnętrznym, pamięci przenośnej itd. 
+Można tu również określić, czy program ma skopiować aktualnie używaną konfigurację zalogowanego użytkownika, jako konfigurację tworzonej kopii przenośnej.
+Ta opcja będzie dostępna tylko, gdy tworzona jest kopia przenośna z wersji zainstalowanej, nie pojawi się przy generowaniu kopii przenośnej z pobranego pakietu.
+Wciśnięcie przycisku "kontynuuj" utworzy wersję przenośną w podanej lokalizacji.
+Po zakończeniu tworzenia kopii przenośnej, pojawi się informacja o sukcesie operacji.
+Naciśnij "Ok" aby zamknąć tę informację.
+
++ Pierwsze Kroki w NVDA +
+
+++ Uruchomienie NVDA ++
+W celu uruchomienia programu zainstalowanego za pomocą instalatora wybierz NVDA z menu Programy w Menu Start lub użyj skrótu Kontrol+Alt+D.
+Możesz również wpisać NVDA w oknie Uruchom w menu Start i nacisnąć klawisz Enter, a program zostanie uruchomiony.
+Możesz również podać pewne [parametry linii komend #CommandLineOptions] które pozwalają zrestartować NVDA (-r), zakończyć (-q), wyłączyć dodatki (--disable-addons), etc.
+
+Aby uruchomić wersję przenośną NVDA, przejdź do katalogu w którym zostały wypakowane pliki, zaznacz plik  "nvda.exe" i naciśnij klawisz Enter lub dwukrotnie kliknij na nim lewym przyciskiem myszy.
+
+Po uruchomieniu NVDA usłyszysz coraz wyższe dźwięki wskazujące, że program się ładuje.
+Czas uruchamiania zależy od tego, jak szybki jest twój komputer oraz od tego, czy program ładuje się z dysku, pamięci USB czy z płyty.
+W przypadku korzystania z wolniejszych nośników można usłyszeć komunikat: "Ładowanie NVDA, Proszę czekać..."
+
+Jeśli podczas uruchamiania programu nie usłyszałeś/aś powyższych komunikatów, ale dźwięk oznaczający błąd systemu Windows lub dźwięki o coraz niższej wysokości oznacza to iż NVDA nie działa prawidłowo i należy zgłosić powstały problem do twórców programu. 
+Więcej informacji o zgłaszaniu problemów znajdziesz na stronie projektu.
+
+Przy pierwszym uruchomieniu, NVDA wyświetli ekran powitalny z podstawowymi informacjami o klawiszu NVDA i o menu programu.
+(więcej na ten temat znajduje się w poniższych sekcjach.)
+Okienko zawiera również 3 pola wyboru.
+Pierwsze pozwala ustalić, czy NVDA będzie używał klawisza Capslock jako klawisza komend NVDA.
+Drugie pozwala włączyć automatyczne uruchamianie programu po zalogowaniu do systemu i jest dostępny tylko dla zainstalowanych kopii NVDA.
+Trzecie pole wyboru określa czy to okienko dialogowe ma się pojawiać przy każdym uruchomieniu programu.
+
+++ Polecenia klawiszowe w NVDA ++
+
++++ Klawisz komend NVDA +++
+Większość poleceń programu NVDA wymaga naciśnięcia specjalnego klawisza zwanego klawiszem NVDA w połączeniu z innymi klawiszami.
+Wyjątkiem są polecenia przeglądu tekstu, które przypisane są do pojedynczych klawiszy numerycznych, oraz niektóre inne polecenia.
+
+Można skonfigurować NVDA tak, by klawisz Insert znajdujący się na klawiaturze numerycznej, jak i klawisz Insert znajdujący się w pobliżu klawiszy strzałek, albo klawisz Capslock mogły zostać użyte jako specjalny klawisz poleceń NVDA.
+Domyślnie obydwa klawisze Insert są ustawione jako klawisz poleceń NVDA.
+
+Aby którykolwiek z klawiszy poleceń NVDA wykonał oryginalnie przypisaną mu funkcję (np. dla przełączenia Capslock, gdy jest on wybrany jako klawisz NVDA), należy nacisnąć ten klawisz dwukrotnie w krótkim odstępie czasu.
+
++++ Układy Klawiatury +++
+NVDA obecnie obsługuje dwa zestawy poleceń (zwane układami klawiatury): układ dla komputerów stacjonarnych i układ dla laptopów.
+NVDA jest domyślnie skonfigurowany do korzystania z układu dla komputera stacjonarnego, ale można przełączyć się do układu klawiatury laptopa w Ustawienia klawiatury w menu NVDA.
+
+Układ dla komputera stacjonarnego sprawia, że intensywnie wykorzystujemy klawiaturę numeryczną (z wyłączonym klawiszem NumLock).
+Mimo, że większość laptopów nie ma fizycznej klawiatury numerycznej, niektóre laptopy mogą emulować ją poprzez przytrzymanie klawisza FN i naciskanie na litery i cyfry z prawej strony klawiatury (7, 8, 9, u, i, o, j, k, l itp.).
+Jeśli twój laptop nie może tego zrobić, albo nie pozwala wyłączyć klawisza NumLock, możesz przełączyć się na układ Laptopa.
+
+++ Gesty dotykowe ++
+Jeśli korzystasz z NVDA pod kontrolą systemu Windows 8 lub nowszego i posiadasz komputer z ekranem dotykowym, możesz korzystać z gestów dotykowych nvda.
+Gdy NVDA jest uruchomiony, gesty dotykowe wykonywane na ekranie są przechwytywane przez program bezpośrednio. 
+Oznacza to, że gesty wykonywane normalnie, nie będą działać jeśli włączony jest NVDA.
+
++++ Eksploracja ekranu +++
+Najprostrzą żeczą, którą możesz zrobić z NVDA przy pomocy ekranu dotykowego, jest wypowiedzenie tekstu lub kontrolki w dowolnym punkcie ekranu. 
+Umieść jeden palec na dowolnym miejscu ekranu, by usłyszeć dany obiekt.
+Przesuwaj palec po ekranie, by usłyszeć inne kontrolki lób tekst pod nim.
+
++++ Gesty dotykowe +++
+Ilekroć w tym podręczniku zostanie wymieniona komenda klawiatórowa NVDA, zostanie podany gest dotykowy, który jest jej odpowiednikiem. 
+Ponirzej wyjaśnienie jak wykonywać te gesty.
+
+==== stuknięcia ====
+Stuknij szybko w ekran jednym lub wieloma palcami.
+
+Jednokrotne stuknięcie pojedynczym palcem jest określane po prostu jako stuknięcie.
+Pojedyncze stuknięcie dwoma palcami jest określane jako stuknięcie dwoma palcami i tak dalej.
+
+Jeśli to samo stuknięcie jest wykonane wielokrotnie w krótkich odstępach czasu, NVDA potraktuje je jako gest wielokrotny.
+Stuknięcie dwókrotne będzie podwójnym stuknięciem.
+Stuknięcie 3 razy będzie potrójnym stuknięciem i tak dalej.
+Te wielokrotne gesty również uwzględniają ilość użytych palców, więc możliwe są gesty takie jak potrójne stuknięcie dwoma palcami, pojedyncze stuknięcie czterema palcami itd. 
+
+==== Machnięcia ====
+Przesuń szybko palcem po ekranie.
+
+Zależnie od kierunku istnieją cztery możliwe machnięcia: machnięcie w lewo, machnięcie w prawo, machnięcie do góry i machnięcie w dół.
+
+Podobnie jak ze stuknięciami - więcej niż jeden palec może być użyty przy wykonywaniu gestu.
+A zatem możliwe są gesty takie jak machnięcie do góry dwoma palcami, albo machnięcie w lewo czterema palcami.
+
++++ Tryby dotyku +++
+Poniewarz istnieje więcej komend NVDA możliwych do wprowadzenia z klawiatóry niż możliwych do wykonania gestów, NVDA oferuje rużne tryby dotyku tyczące się innych podzestawów poleceń. 
+Są to tryb obiektowy i tekstowy. 
+Niektóre gesty wypisane w tym dokumencie mogą zatem mieć wymienione w nawiasach tryby użycia. 
+Np. machnięcie w górę (w trybie tekstowym) oznacza, że aby wprowadzić to polecenie, musisz najpierw aktywować tryb tekstowy, a następnie wykonać właściwy gest.
+Jeśli dana komenda nie posiada opisu trybu, oznacza to że działa w obu trybach.
+
+%kc:beginInclude
+Aby przełączać tryby dotyku, wykonaj stuknięcie trzema palcami.
+%kc:endInclude
+
+++ Tryb pomocy ++
+Wiele komend NVDA zostało opisanych w tym dokumencie. Najprostrzym sposobem by samodzielnie je odkrywać jest aktywacja trybu pomocy.
+
+Aby aktywować tryb pomocy, naciśnij nvda+1. 
+Aby go wyłączyć - ponownie naciśnij NVDA+1.
+W trybie pomocy, wciśnięcie kombinacji klawiszy czy wykonanie gestu dotykowego zpowoduje opisanie, co dana komenda czy gest robi. 
+Rzeczywista komenda nie zostanie wtedy wykonana.
+
+++ Menu NVDA ++
+Menu NVDA pozwala na zmianę ustawień, dostęp do pomocy, zachowywanie bieżących ustawień lub przywracanie ustawień wcześniej zapisanych, umożliwia dostęp do dodatkowych narzędzi oraz pozwala wyjść z programu.
+
+Gdy program NVDA jest uruchomiony, wejście do menu odbywać się może przez naciśnięcie NVDA+N, albo podwujne stuknięcie dwoma palcami na ekranie dotykowym.
+Możesz również wejść do menu NVDA przez kliknięcie ikonki w obszarze powiadomień.
+Kliknij prawym przyciskiem myszy na ikonie NVDA, albo przejdź do obszaru powiadomień naciskając klawisz Windows+B, strzałki kursora by przejść do ikony NVDA i naciśnij klawisz Aplikacje (w większości klawiatur umieszczony obok prawego klawisza Kontrol), albo użyj kombinacji klawiszy shift+klawisz funkcyjny f10.
+Spowoduje to rozwinięcie menu. Nawigacja w menu odbywa się za pomocą strzałek, natomiast aby aktywować wybrany element. naciśnij Enter.
+
+++ Podstawowe Polecenia Klawiszowe ++
+%kc:beginInclude
+|| Działanie | Skrót desktopa | skrót laptopa | gest dotykowy | Opis |
+| Zatrzymuje mowę | Kontrol | control | stuknięcie dwoma palcami | Natychmiast przestaje czytać |
+| Pauza mowy | Shift | shift | brak | Natychmiast zatrzymuje mowę. Naciskając ponownie będzie mówić od momentu w którym zostało przerwane (jeśli wstrzymywanie jest obsługiwane przez syntezator) |
+| NVDA Menu | NVDA+n | NVDA+N | podwujne stuknięcie dwoma palcami | Pojawia się menu NVDA, aby umożliwić dostęp do ustawień, narzędzi, pomocy itp |
+| Przełącz tryb komunikacji | NVDA+s | NVDA+s | brak | Przełącza tryb mowy pomiędzy: mowa, dźwięki i bez mowy |
+| Przełączanie trybu pomocy | NVDA+1 | brak | Naciśnięcie dowolnego klawisza w tym trybie zostanie odczytany klawisz i opis wszelkich poleceń NVDA z nim związanych |
+| Zakończ NVDA | NVDA+q | NVDA+q | brak | Kończy działanie NVDA |
+| Przepuść następny klawisz | NVDA+f2 | NVDA+f2 | brak | Jednorazowo przepuszcza następny naciśnięty klawisz wprost do systemu bez przetwarzania go w NVDA. Nawet jeżeli przepuszczony klawisz posiada w NVDA swoją funkcję, nie zostanie ona wykonana. |
+| Włącz/wyłącz tryb uśpienia dla aktywnej aplikacji | nvda+shift+s | NVDA+shift+z | brak | ustawienie trybu uśpienia dla konkretnej aplikacji sprawia, że nvda przestaje mówić w jej oknie, nie reaguje na wciskane skróty klawiszowe oraz przestaje wyświetlać tekst na monitorze brajlowskim. Może być to użyteczne w przypadku programów posiadających wbudowane funkcje odczytu interfejsu. Aby wyłączyć tryb uśpienia, w oknie takiej aplikacji należy wcisnąć skrót ponownie |
+%kc:endInclude
+
+++ odczyt informacji systemowych ++
+%kc:beginInclude
+|| działanie | skrót | opis |
+| odczytaj aktualny czas | nvda+f12 | podaje aktualny czas na zegarze systemowym. Podwójne wciśnięcie odczyta aktualną datę. |
+| odczytaj stan baterii | nvda+shift+b | podaje status baterii oraz w procentach poziom energii i pozostały czas pracy akumulatora. |
+| odczytaj tekst w schowku | nvda+c | czyta tekst znajdujący się aktualnie w schowku. |
+%kc:endInclude
+
++ Nawigacja z NVDA +
+NVDA pozwala eksplorować i nawigować w systemie na kilka sposobów, uwzględniających normalną interakcję i przeglądanie.
+
+++ Obiekty ++[Objects]
+Każda aplikacja i sam system operacyjny składa się z wielu obiektów.
+Obiekt to pojedynczy element, taki jak fragment tekstu, przycisk, pole wyboru, suwak, lista lub pole edycji.
+
+++ Nawigacja punktem uwagi ++[SystemFocus]
+Punkt uwagi, często określany po prostu jako fokus, jest to [obiekt #Objects] który otrzymuje informację o klawiszach naciskanych na klawiaturze.
+Jeśli np. wpisujesz tekst do pola edycji - to pole edycji posiada punkt uwagi.
+
+Najczęściej używaną metodą nawigacji wśród okien i formularzy w systemie Windows jest nawigacja przy użyciu punktu uwagi. Odbywa się ona za pomocą klawiatury - na przykład gdy naciskasz Tab by przejść od jednej kontrolki do następnej, Shift+Tab by przejść do poprzedniej kontrolki, Alt by dostać się do menu programu czy też Alt+Tab by przełączać się między działającymi aplikacjami.
+Za każdym razem, gdy wykonujesz te czynności, NVDA będzie informować cię o obiekcie, który aktualnie posiada punkt uwagi podając jego nazwę, typ, zawartość, stan, opis, skrót klawiaturowy i informacje o położeniu.
+
+Przydatne skróty klawiszowe do nawigacji za pomocą punktu uwagi:
+%kc:beginInclude
+|| Działanie | Skrót Desktopa | skrót laptopa | Opis |
+| Odczytuje aktualny punkt uwagi | NVDA+tab | NVDA+tab | Odczytuje obiekt posiadający aktualnie punkt uwagi. Dwukrotne naciśnięcie literuje informacje  |
+| Odczytuje tytuł okna | NVDA+t | NVDA+t | Odczytuje tytuł aktualnej aplikacji lub okna. Dwukrotne naciśnięcie literuje tytuł. Trzykrotne naciśnięcie kopiuje tytuł do schowka. |
+| Odczytuje aktywne okno | NVDA+b | NVDA+b | Odczytuje zawartość obiektu na pierwszym planie (aktualnie aktywnego okna). Funkcja przydatna zwłaszcza w przypadku okna dialogowego lub komunikatu, którego pojawienie się nie zostało zauważone. |
+| Odczytaj pasek stanu | NVDA+end | NVDA+shift+end | odczytuje pasek statusu jeśli napodka na takowy, przenosi tam także obiekt nawigatora. Dwukrotne naciśnięcie przeliteruje informację. |
+%kc:endInclude
+
+++ Nawigacja Kursorem systemowym ++
+Gdy [obiekt #Objects], który umożliwia nawigację i/lub edycję tekstu otrzymuje [punkt uwagi #SystemFocus], możesz przemieszczać się po tekście używając kursora systemowego, nazywanego także kursorem edycji.
+
+Gdy punkt uwagi znajduje się na obiekcie, który posiada kursor systemowy, możesz używać klawiszy strzałek, page up, page down, home, end, etc. do przemieszczania się po tekście.
+Możesz również zmieniać tekst, jeśli kontrolka umożliwia edycję.
+NVDA będzie czytał, gdy przemieszczasz się po znakach słowach i liniach, będzie również ogłaszał zmiany w zaznaczeniu tekstu.
+
+NVDA wykorzystuje następujące klawisze poleceń do nawigacji kursorem klawiatury:
+%kc:beginInclude
+|| Działanie | Skrót Desktopa | skrót laptopa | Opis |
+| Czyta wszystko | NVDA+strzałka w dół | NVDA+a | Odczytuje od bieżącej pozycji kursora do końca tekstu, przesuwając kursor podczas czytania. |
+| Odczytuje aktualną linię | NVDA+strzałka w górę | NVDA+l | Odczytuje aktualną linię w miejscu kursora. Dwukrotne naciśnięcie literuje aktualną linię. |
+| Odczytuje aktualne zaznaczenie | NVDA+Shift+strzałka w górę | NVDA+shift+s | Odczytuje cały aktualnie zaznaczony tekst |
+| Następne zdanie | alt+strzałka w dół | alt+strzałka w dół | Przenosi kursor do następnego zdania i odczytuje je. (obsługiwane tylko w Microsoft Word i Outlook) |
+| Poprzednie zdanie | alt+strzałka w górę | alt+strzałka w górę | Przenosi kursor do poprzedniego zdania i odczytuje je. (obsługiwane tylko w Microsoft Word i Outlook) |
+
+
+Do poruszania się w struktórze tabel słurzą następujące klawisze poleceń:
+|| Działanie | skrót | opis |
+| przejdź do poprzedniej kolumny | CTRL+ALT+strzałka w lewo | przenosi kursor do poprzedniej kolumny w tej samej linii |
+| Przejdź do następnej kolumny | CTRL+ALT+strzałka w prawo | przenosi kursor do następnej kolumny w tej samej linii |
+| Przejdź do poprzedniej linii | CTRL+ALT+strzałka w górę | Przenosi kursor do linii poprzedniej |
+| Przejdź do następnej linii | CTRL+ALT+strzałka w dół | Przenosi do następnej linii. |
+%kc:endInclude
+
+++ Nawigacja w Hierarchii Obiektów ++
+Przez większość czasu będziesz pracować z aplikacjami używając komend przenoszących [punkt uwagi #SystemFocus] i [kursor systemowy #SystemCaret].
+Czasem jednak możesz chcieć eksplorować aktualną aplikację lub system operacyjny bez przemieszczania punktu uwagi lub kursora.
+Może się też zdarzyć konieczność pracy z  [obiektami #Objects], do których nie można uzyskać dostępu przy użyciu klawiatury.
+W takich przypadkach, możesz posłużyć się nawigacją w hierarchii obiektów.
+
+Nawigacja w hierarchii obiektów pozwala ci przemieszczać się pomiędzy pojedynczymi [obiektami #Objects] i uzyskiwać o nich informacje.
+Gdy przejdziesz do obiektu, NVDA ogłosi go podobnie jak ogłasza punkt uwagi.
+Aby obejrzeć tekst w układzie takim jak jest on rozmieszczony na ekranie, możesz zamiast tego użyć [trybu przeglądania ekranu #ScreenReview].
+
+Obiekty w systemie są uporządkowane hierarchicznie.
+Oznacza to, że pewne obiekty zawierają inne obiekty i musisz wejść do nich, aby obejrzeć zawartość.
+Dla przykładu: lista zawiera elementy listy, więc musisz wejść do listy, aby uzyskać dostęp do jej elementów.
+Jeśli znajdujesz się na elemencie listy, przejście do poprzedniego i następnego będzie przemieszczać pomiędzy elementami tej listy.
+Przejście do obiektu nadrzędnego - spowoduje powrót do obiektu listy.
+Możesz wówczas przejść poza tę listę, aby obejrzeć inne obiekty.
+Podobnie: pasek narzędzi zawiera kontrolki, więc musisz wejść do tego paska, aby uzyskać dostęp do znajdujących się wewnątrz niego kontrolek.
+
+Obiekt aktualnie przeglądany, jest nazywany obiektem nawigatora.
+Gdy dotrzesz do obiektu, możesz przejrzeć jego treść używając [poleceń przeglądania tekstu #ReviewingText] gdy znajdujesz się w [trybie przeglądania obiektu #ObjectReview].
+Domyślnie obiekt nawigatora podąża za punktem uwagi, ale to zachowanie można włączać i wyłączać.
+
+Monitor brajlowski domyślnie podąża za [punktem uwagi #SystemFocus] i [kursorem systemowym #SystemCaret] zamiast za obiektem nawigatora i przeglądaniem tekstu.
+Jeśli chcesz spowodować podążanie brajla za obiektem nawigatora lub przeglądaniem tekstu musisz [ustawić powiązanie brajla z #BrailleTether] przeglądaniem.
+
+Poniżej znajdują się skróty klawiszowe do nawigacji w hierarchii obiektów:
+
+%kc:beginInclude
+|| Działanie | Skrót desktopa | Skrót Laptopa | gest dotykowy | Opis |
+| Odczytuje aktualny obiekt | NVDA+numeryczne 5 | NVDA+shift+o | brak | Odczytuje aktualny obiekt w hierarchii nawigacji. Dwukrotne naciśnięcie literuje informację, trzykrotne kopiuje nazwę obiektu wraz z zawartością do schowka. |
+| Przechodzi do obiektu nadrzędnego | NVDA+numeryczne 8 | NVDA+shift+strzałka w górę | machnięcie w górę (tryb obiektowy) | Przechodzi do obiektu nadrzędnego, czyli zawierającego aktualny obiekt nawigatora. |
+| Przechodzi do poprzedniego obiektu      | NVDA+numeryczne 4 | NVDA+shift+strzałka w lewo | machnięcie w lewo (tryb obiektowy) | Przechodzi do poprzedniego obiektu znajdującego się na tym samym poziomie. |
+| Przechodzi do następnego obiektu | NVDA+numeryczne 6 | NVDA+shift+strzałka w prawo | machnięcie w prawo (tryb obiektowy) | Przechodzi do następnego obiektu znajdującego się na tym samym poziomie. |
+| Przechodzi do pierwszego obiektu podrzędnego | NVDA+numeryczne 2 | NVDA+shift+strzałka w dół | machnięcie w dół (tryb obiektowy) | Przechodzi do pierwszego obiektu zawieranego przez aktualny obiekt nawigatora. |
+| Przechodzi do punktu uwagi | NVDA+numeryczny Minus | NVDA+backspace | brak | Przechodzi do obiektu, który aktualnie posiada punkt uwagi, oraz umieszcza kursor przeglądu na pozycji kursora Systemu |
+| Aktywuje aktualny obiekt | NVDA+numeryczny Enter | NVDA+enter | podwujne stuknięcie | Aktywuje bieżący obiekt (podobnie jak kliknięcie myszą lub naciśnięcie klawisza spacji gdy ma punkt uwagi) |
+| Przenosi punkt uwagi lub kursor na aktualną pozycję przeglądania | NVDA+shift+numeryczny Minus | NVDA+shift+backspace | brak | naciśnięty raz przenosi punkt uwagi do aktualnego obiektu nawigatora, naciśnięty dwukrotnie przenosi kursor systemowy do aktualnej pozycji kursora przeglądania |
+| Odczytuje położenie kursora przeglądu | NVDA+numeryczne Delete | NVDA+delete | brak | Zgłasza położenie tekstu lub obiektu pod kursorem przeglądu. Może to być wyrażone albo w procentach w obrębie dokumentu, albo jako odległość od krawędzi strony, albo jako dokładna pozycja na ekranie. Dwukrotne naciśnięcie odczyta dalsze informacje.|
+%kc:endInclude
+
+UWAGA: Aby skróty na klawiaturze numerycznej działały poprawnie, należy wyłączyć klawisz Num Lock.
+
+++ Przegląd Tekstu w Aktualnym Obiekcie ++[ReviewingText]
+NVDA pozwala odczytywać treść [ekranu #ScreenReview], aktualnego [dokumentu #DocumentReview] lub aktualnego [obiektu #ObjectReview] znakami, słowami lub liniami.
+Funkcja ta jest szczególnie przydatna np. w przypadku aplikacji konsolowych gdzie nie ma [kursora systemowego #SystemCaret] lub kursor systemowy ma tylko ograniczone możliwości działania.
+Możesz też użyć jej do przeglądania długiego komunikatu w okienku powiadomienia.
+
+Przesuwając kursor przeglądania, nie zmieniasz położenia kursora systemowego, więc możesz przeglądać tekst nie gubiąc aktualnej pozycji w edytowanym tekście.
+Jeśli jednak kursor systemowy zostanie przesunięty, kursor przeglądu domyślnie podąża za nim.
+To domyślne zachowanie można wyłączyć.
+
+Monitor brajlowski domyślnie podąża za [punktem uwagi #SystemFocus] i [kursorem systemowym #SystemCaret] zamiast za obiektem nawigatora i przeglądaniem tekstu.
+Jeśli chcesz spowodować podążanie brajla za obiektem nawigatora lub przeglądaniem tekstu musisz [ustawić powiązanie brajla z #BrailleTether] przeglądaniem.
+
+Do przeglądania tekstu są dostępne następujące polecenia:
+%kc:beginInclude
+|| Działanie | Skrót desktopa | Skrót laptopa | gest dotykowy | Opis |
+| Przenosi punkt przeglądu do pierwszej linii | shift+numeryczne 7 | NVDA+control+home | brak | Przenosi punkt przeglądu do pierwszej linii w aktualnym obiekcie |
+| Przechodzi do poprzedniej linii w przeglądzie | numeryczne 7 | NVDA+strzałka w górę | machnięcie w górę (tryb tekstowy) | Przenosi punkt przeglądu do poprzedniej linii. |
+| Odczytuje linię w przeglądzie | numeryczne 8 | NVDA+shift+kropka | brak | Odczytuje linię, w której jest obecnie punkt przeglądu. Dwukrotne naciśnięcie literuje ją, trzykrotne literuje fonetycznie. |
+| Przechodzi do następnej linii w przeglądzie | numeryczne 9 | NVDA+strzałka w dół | machnięcie w dół (tryb tekstowy) | Przenosi punkt przeglądu do następnej linii. |
+| Przechodzi do ostatniej linii w przeglądzie | shift+numeryczne 9 | NVDA+control+end | brak | Przenosi punkt przeglądu do ostatniej linii w aktualnym obiekcie. |
+| Przechodzi do poprzedniego wyrazu w przeglądzie | numeryczne 4 | NVDA+control+lewo | machnięcie dwoma palcami w lewo (tryb tekstowy) | Przenosi punkt przeglądu do poprzedniego wyrazu w tekście. |
+| Odczytuje aktualny wyraz w przeglądzie | numeryczne 5 | NVDA+control+kropka | brak | Odczytuje aktualny wyraz, na którym jest umieszczony punkt przeglądu. Dwukrotne naciśnięcie literuje wyraz, trzykrotne literuje fonetycznie. |
+| Przechodzi do następnego wyrazu w przeglądzie | numeryczne 6 | NVDA+control+strzałka w prawo | machnięcie dwoma palcami w prawo | Przenosi punkt przeglądu do następnego wyrazu w tekście. |
+| Przechodzi na początek wiersza w przeglądzie | shift+numeryczne 1 | NVDA+home | brak | Przenosi punkt przeglądu na początek aktualnej linii w tekście. |
+| Przechodzi do poprzedniego znaku w przeglądzie | numeryczne 1 | NVDA+lewo | machnięcie jednym palcem w lewo (tryb tekstowy) | Przenosi kursor przeglądu do poprzedniego znaku aktualnej linii w tekście |
+| Odczytuje aktualny znak w przeglądzie | numeryczne 2 | NVDA+kropka | brak | Odczytuje aktualny znak w punkcie przeglądu. Dwukrotne wciśnięcie literuje znak. Trzykrotne naciśnięcie podaje wartość kodu ASCII dziesiętnie i szesnastkowo. |
+| Przechodzi do następnego znaku w przeglądzie | numeryczne 3 | NVDA+prawo | machnięcie jednym palcem w prawo (tryb tekstowy) | Przenosi punkt przeglądu do następnego znaku aktualnej linii. |
+| Przechodzi na koniec linii w przeglądzie | shift+numeryczne 3 | NVDA+end | brak | Przenosi punkt przeglądu na koniec aktualnej linii. |
+| Odczytaj wszystko z przeglądu | numeryczny Plus | NVDA+shift+a | machnięcie trzema palcami w dół (tryb tekstowy) | Odczytuje od punktu przeglądu do końca tekstu. |
+| Kopiuj od punktu zaznaczenia | NVDA+f9 | nvda+f9 | brak | Ustawia w aktualnym punkcie przeglądu początek zaznaczenia kopiowanego tekstu. |
+| Kopiuj do punktu zaznaczenia | NVDA+f10 | NVDA+f10 | brak | Kopiuje do schowka tekst od początku zaznaczenia do aktualnego punktu przeglądu. |
+| Informacje o formatowaniu | NVDa+f | NVDA+F | brak | odczytuje informacje o formatowaniu tekstu pod kursorem. |
+%kc:endInclude
+
+UWAGA: Aby skróty na klawiaturze numerycznej działały poprawnie, należy wyłączyć klawisz Num Lock.
+
+Aby ułatwić zapamiętanie tych poleceń w układzie klawiatury dla desktopa, zwruć uwagę, że przegląd podstawowych poleceń tekstowych zorganizowany jest w tabeli trzy kolumny na trzy linie od góry do dołu jest wiersz, słowo, znak, oraz od lewej do prawej poprzedni, aktualny i następny.
+Układ został przedstawiony w tabeli poniżej:
+| Poprzednia linia | Aktualna linia | Następna linia |
+ | Poprzednie słowo | Aktualne słowo | Następne słowo |
+| Poprzedni znak | Aktualny znak | Następny znak |
+
+++ Tryby Przeglądania ++[ReviewModes]
+[Polecenia przeglądania tekstu #ReviewingText] pozwalają przeglądać treść wewnątrz aktualnego obiektu nawigatora, aktualnego dokumentu lub ekranu, zależnie od wybranego trybu przeglądania.
+Tryby przeglądania zastępują poziom przeglądu, dawniej używany w NVDA.
+
+Poniższe komendy przełączają między trybami przeglądania:
+%kc:beginInclude
+|| Działanie | Skrót desktopa | Skrót laptopa | Gest dotykowy | Opis |
+| Przełącz do następnego trybu przeglądania | NVDA+numeryczne 7 | NVDA+pageUp | machnięcie dwoma palcami w górę | przełącza do następnego dostępnego trybu przeglądania |
+| Przełącz do poprzedniego trybu przeglądania | NVDA+numeryczne 1 | NVDA+pageDown | machnięcie dwoma palcami w dół | przełącza do poprzedniego dostępnego trybu przeglądania |
+%kc:endInclude
+
++++ Przeglądanie obiektu +++[ObjectReview]
+W trybie przeglądania obiektu, możesz przeglądać tylko treść aktualnego [obiektu nawigatora #ObjectNavigation].
+Dla obiektów typu pole edycji, lub innych kontrolek tekstowych, będzie to na ogół tylko tekst danej kontrolki.
+Dla innych obiektów może to być nazwa i/lub wartość.
+
++++ Przeglądanie dokumentu +++[DocumentReview]
+Gdy [obiekt nawigatora #ObjectNavigation] jest w dokumencie prezentowanym w trybie czytania (np. strona www) lub innym złożonym dokumencie (np. dokument Lotus Symphony), możliwe jest przejście do trybu przeglądania dokumentu.
+Ten tryb pozwala na przeglądanie zawartości całego dokumentu.
+
+Po przejściu z trybu przeglądania obiektu do przeglądania dokumentu, punkt przeglądu jest umieszczony w dokumencie na pozycji obiektu nawigatora.
+Podczas przechodzenia po dokumencie przy użyciu poleceń przeglądania, obiekt nawigatora automatycznie podąża do aktualnego obiektu w punkcie przeglądania.
+
+Proszę zwrócić uwagę, że NVDA będzie automatycznie przełączał się w tryb przeglądania dokumentu z trybu przeglądania obiektu, gdy przechodzimy między dokumentami udostępnianymi w trybie czytania.
+
++++ Przeglądanie ekranu +++[ScreenReview]
+Tryb przeglądania ekranu pozwala oglądać rozmieszczenie tekstu w oknie aplikacji analogiczne do tego jak jest on rozmieszczony wizualnie.
+Jest to działanie podobne do przeglądania ekranu, lub funkcjonalności myszy dostępnej w wielu innych screen readerach.
+
+Po przejściu do trybu przeglądania ekranu, punkt przeglądu jest umieszczany na pozycji aktualnego [obiektu nawigatora #ObjectNavigation].
+Podczas przechodzenia po ekranie poleceniami przeglądu, obiekt nawigatora automatycznie podąża do obiektu znajdującego się na pozycji punktu przeglądu.
+
+Uwaga: w niektórych nowszych aplikacjach, NVDA może nie widzieć części lub całości tekstu wyświetlanego na ekranie, co jest rezultatem zastosowania w nich nowszych technik rysowania ekranu, których obsługa przez NVDA nie jest możliwa w tym momencie.
+
+++ Nawigacja Myszą ++
+Gdy poruszasz myszą, NVDA domyślnie odczytuje tekst znajdujący się bezpośrednio pod jej wskaźnikiem.
+W zależności od typu okna zawierającego tekst odczytany może zostać cały paragraf lub pojedyncza linia.
+
+Możesz także skonfigurować NVDA w taki sposób, aby oprócz odczytywania tekstu program informował również o typie [obiektu #Objects] lub kontrolki, nad którym aktualnie znajduje się wskaźnik myszy np listach, przyciskach itp. 
+Może być to użyteczne dla zupełnie niewidomych użytkowników, jako że czasem sam tekst nie wystarcza.
+
+NVDA może za pomocą dźwięków przekazywać położenie myszy na ekranie.
+Im wyżej na ekranie znajduje się wskaźnik, tym wyższy jest generowany dźwięk.
+Im dalej z lewej lub prawej strony znajduje się wskaźnik, tym bardziej z lewej lub prawej strony będzie odtwarzany dźwięk (zakładając, że użytkownik posiada stereofoniczne słuchawki lub głośniki).
+
+Wyżej opisane opcje dotyczące nawigacji myszą nie są domyślnie włączone.
+Możesz skonfigurować je korzystając z okna dialogowego [Ustawienia myszy #MouseSettings] dostępnego z menu Ustawienia.
+
+Nawigacja myszą powinna odbywać się przy użyciu fizycznej myszy lub trackpada, NVDA posiada jednak kilka klawiszy związanych z myszą:
+%kc:beginInclude
+|| Działanie | Skrót Desktopa | Skrót Laptopa | Opis |
+| Lewy przycisk myszy | numeryczny Slesz | NVDA+lewy nawias kwadratowy ("[") | Wykonuje jedno kliknięcie lewym przyciskiem myszy. Dwukrotne kliknięcie może być wykonywane przez naciśnięcie tego klawisza dwa razy w krótkich odstępach czasu |
+| Blokuj lewy przycisk myszy | shift+numeryczny Slesz | NVDA+control+lewy nawias kwadratowy ("[") |  Wciśnięcie i zablokowanie lewego przycisku myszy. Naciśnij klawisze ponownie, aby zwolnić przycisk. Aby przeciągnąć mysz, naciśnij klawisze aby zablokować lewy przycisk a następnie przesuń mysz ręcznie, lub przy użyciu innych poleceń przemieszczania myszy|
+| Prawy przycisk myszy | numeryczna Gwiazdka | NVDA+prawy nawias kwadratowy ("]") | Wykonuje jedno kliknięcie prawym przyciskiem myszy. |
+| Blokuj prawy przycisk myszy | shift+numeryczna Gwiazdka | NVDA+control+prawy nawias kwadratowy ("]") | Blokuje lub zwalnia prawy przycisk myszy (Metoda: przeciągnij i upuść). |
+| Przesuń mysz do aktualnego obiektu | NVDA+numeryczny Slesz | NVDA+shift+m | Przesuwa mysz w miejsce aktualnego obiektu i punktu przeglądu. |
+| Przejdź do obiektu pod myszą | NVDA+numeryczna Gwiazdka | NVDA+shift+n | Przenosi obiekt nawigatora do obiektu znajdującego się pod wskaźnikiem myszy. |
+%kc:endInclude
+
++ Tryb czytania +
+Złożone dokumenty przeznaczone tylko do odczytywania, na przykład strony internetowe, przedstawiane są w NVDA w trybie czytania.
+Dotyczy to dokumentów wyświetlanych w programach Mozilla Firefox, Microsoft Internet Explorer, Mozilla Thunderbird, wiadomości HTML w Microsoft Outlook, Google Chrome, Adobe Reader i Adobe Flash.
+Tryb czytania jest również opcjonalnie dostępny dla dokumentów w programie Microsoft Word . 
+
+W trybie czytania treść dokumentu jest udostępniana w płaskiej reprezentacji, po której można się przemieszczać z użyciem klawiszy kursora tak jak w zwykłych dokumentach tekstowych.
+Wszystkie polecenia NVDA dotyczące [punktu uwagi #SystemCaret] będą działały w tym trybie; np. czytaj wszystko, odczytaj formatowanie, komendy nawigacji wewnątrz tabel, etc.
+Informacja o tym, że tekst jest linkiem, nagłówkiem itd. jest automatycznie anonsowana, gdy się przemieszczasz po dokumencie.
+
+Czasem zachodzi potrzeba interakcji z formularzami znajdującymi się w tych dokumentach. 
+Dla przykładu, będziesz musiał to zrobić dla pól edycji i list, aby możliwe stało się wpisywanie znaków i używanie klawiszy kursora do pracy z kontrolką.
+Jest to możliwe dzięki trybowi formularza, w którym prawie wszystkie naciskane klawisze są przekazywane do kontrolki.
+Domyślnie w trybie czytania NVDA będzie automatycznie przechodzić w tryb formularza, gdy przejdziesz klawiszem Tab lub klikniesz kontrolkę, która tego wymaga.
+Odwrotnie - kliknięcie lub przejście Tabem do kontrolki nie wymagającej trybu formularza, spowoduje przejście do trybu czytania.
+Możesz również przejść do trybu formularza przy użyciu spacji lub entera, naciśniętego na kontrolce, która wymaga trybu formularza.
+Naciśnięcie klawisza Esc spowoduje powrót do trybu czytania.
+Dodatkowo możesz wymusić tryb formularza, który pozostanie wówczas aktywny do chwili ręcznego wyłączenia.
+
+%kc:beginInclude
+|| Działanie | Skróty Klawiszowe | Opis |
+| Przełącz tryb czytania | NVDA+spacja | Przełącza pomiędzy trybem formularza i trybem czytania |
+| Wyjście z trybu formularza | escape | Przełącza się na tryb czytania, jeśli wcześniej tryb formularza włączył się automatycznie |
+| Odśwież zawartość dokumentu | NVDA+f5 | Odświeża aktualny dokument w trybie przeglądania. (przydatne w przypadku, gdy niektórych treści brakuje na stronie. Niedostępne w Microsoft Word i Outlook.) |
+| Znajdź | NVDA+kontrol+f | Pojawia się okno dialogowe, w którym można wpisać tekst, aby przeszukać aktualny dokument |
+| Znajdź następny | NVDA+f3 | Znajduje w dokumencie następne wystąpienie wyszukiwanego wcześniej tekstu |
+| Znajdź poprzedni | NVDA+shift+f3 | Znajduje w dokumencie poprzednie wystąpienie wyszukiwanego wcześniej tekstu |
+| otwórz długi opis | NVDA+d | otwiera nowe okno zawierające długi opis elementu, na którym się znajdujesz (jeśli dla tego elementu długi opis został zdefiniowany) | 
+%kc:endInclude
+
+
+++ Nawigacja pojedynczymi literami ++
+Podczas pracy w trybie czytania można używać pojedynczych liter do przechodzenia pomiędzy kolejnymi elementami określonego typu. 
+Zauważ, że nie wszystkie te komendy są dostępne we wszystkich typach dokumentów.
+
+%kc:beginInclude
+Naciśnięcie litery przechodzi do następnego elementu odpowiedniego typu, natomiast naciśnięcie litery z klawiszem Shift przechodzi do elementu poprzedniego.
+- H: nagłówek
+- L: lista
+- I: element listy
+- T: tabela
+- K: link
+- N: tekst nie będący linkiem
+- F: pole formularza
+- U: nieodwiedzony link
+- V: odwiedzony link
+- E: pole edycji
+- B: przycisk
+- X: pole wyboru
+- C: pole rozwijalne
+- R: przycisk radiowy
+- Q: blok cytatu
+- S: separator
+- M: ramka
+- G: grafika
+- D: punkt orientacyjny
+- O: obiekt zagnieżdżony
+- Cyfry 1 do 6: nagłówki poziomu odpowiednio  od 1 do 6
+- a: adnotacja (komentarz, zmiana edytorska, itd.)
+-
+Aby przejść na początek lub koniec elementów takich jak listy i tabele:
+|| Działanie | Skrót | Opis |
+| Przejdź na początek kontenera | shift+przecinek | przechodzi na początek kontenera (listy, tabeli etc.) na którym ustawiony jest kursor |
+| Przejdź poza koniec kontenera | przecinek | przenosi poza koniec kontenera (listy, tabeli, etc.)na którym znajdował się kursor |
+
+%kc:endInclude
+Niektóre aplikacje webowe takie jak Gmail, Twitter czy Facebook używają pojedynczych liter jako klawiszy skrótu.
+Jeśli chcesz używać tych skrótów i móc jednocześnie posługiwać się klawiszami strzałek do odczytu treści w trybie czytania, możesz tymczasowo wyłączyć nawigację pojedynczymi literami NVDA.
+%kc:beginInclude
+Aby włączyć i wyłączyć nawigację literami dla aktualnego dokumentu, naciśnij NVDA+shift+space.
+%kc:endInclude
+
+++ Lista elementów ++
+Lista elementów umożliwia dostęp do listy różnych elementów, znajdujących się w dokumencie, właściwych dla konkretnej aplikacji.
+Dla przykładu w przeglądarkach www, lista elementów wymienia linki, nagłówki, albo punkty orientacyjne.
+Przyciski radiowe pozwalają przełączać się pomiędzy różnymi typami elementów.
+Pole edycyjne w oknie dialogowym pozwala na filtrowanie listy ułatwiając wyszukiwanie danej pozycji na stronie.
+Możesz użyć przycisków znajdujących się w okienku, aby przejść do wybranego elementu, albo go aktywować.
+%kc:beginInclude
+|| Działanie | Skrót Klawiszowy | Opis |
+| Wyświetl listę elementów w trybie przeglądania | NVDA+f7 | Wyświetla listę różnych typów elementów znajdujących się w bieżącym dokumencie |
+%kc:endInclude
+
+++ Obiekty zagnieżdżone ++
+Strony mogą zawierać bogate treści, korzystając z technologii takich jak Adobe Flash i Sun Java, mogą również zawierać aplikacje i okna dialogowe.
+Gdy napodkasz taki element w trybie czytania, NVDA odczyta odpowiednio "obiekt zagnieżdżony", "Aplikacja" albo "Dialog".
+naciśnij klawisz ENTER na takim obiekcie w celu interakcji z nim.
+Jeśli obiekt jest dostępny dla NVDA, będziesz mógł przemieszczać się w nim klawiszem Tab i pracować tak jak w innych aplikacjach.
+Odpowiednia komenda klawiszowa pozwala na powrót do oryginalnej strony zawierającej aktywowany wcześniej obiekt.
+%kc:beginInclude
+|| Działanie | Skrót Klawiszowy | Opis |
+| Przechodzi do zawartości strony | NVDA+kontrol+spacja | Przenosi punkt uwagi z wewnątrz obiektu zagnieżdżonego do dokumentu, który zawierał ten obiekt |
+%kc:endInclude
+
++ Odczyt treści matematycznej +
+Przy użyciu MathPlayer 4 od Design Science, NVDA może odczytywać i nawigować interaktywnie po wspieranej treści matematycznej.
+Wymaga to zainstalowania MathPlayer 4 na komputerze.
+MathPlayer jest bezpłatnie dostępny do pobrania z : http://www.dessci.com/en/products/mathplayer/
+
+NVDA obsługuje następujące rodzaje treści matematycznej:
+- MathML w Mozilla Firefox i Microsoft Internet Explorer.
+- Design Science MathType w Microsoft Word and PowerPoint. Aby to działało, MathType musi być zainstalowany. Wersja próbna jest wystarczająca.
+- MathML w Adobe Reader. Nie jest to jeszcze oficjalny standard, nie istnieje publicznie dostępne oprogramowanie mogące wytwarzać taką treść.
+-
+
+Podczas odczytywania dokumentu, NVDA wypowie każdą obsługiwaną treść matematyczną tam gdzie się ona znajduje.
+Jeśli używasz monitora brajlowskiego, zostanie ona również wyświetlona w brajlu.
+
+++ Nawigacja interaktywna ++
+Jeśli pracujesz głównie z mową, w większości przypadków zechcesz przeczytać wyrażenie w mniejszych segmentach, zamiast odczytu całości od razu.
+
+W trybie czytania można to osiągnąć przez przejście kursorem do treści matematycznej i naciśnięcie enter.
+
+Poza trybem czytania:
++ Przesuń punkt przeglądu do treści matematycznej.
+Domyślnie, punkt przeglądu podąża za kursorem systemowym, więc można użyć kursora systemowego, by przejść do treści.
++ Następnie, aktywuj poniższe polecenie:
++
+
+%kc:beginInclude
+|| Polecenie | Klawisz | Opis |
+| Interakcja z treścią matematyczną | NVDA+alt+m | Rozpoczyna interakcję z treścią matematyczną. |
+%kc:endInclude
+
+W tym momencie możesz używać poleceń programu MathPlayer np. klawiszy strzałek, do eksploracji wyrażenia.
+Dla przykładu: możesz przechodzić po wyrażeniu strzałkami lewo i prawo,  i wejść wgłąb fragmentu wyrażenia, np. ułamka,  przy użyciu strzałki w dół.
+Więcej informacji zawiera dokumentacja MathPlayer.
+
+Aby powrócić do dokumentu, naciśnij klawisz escape.
+
++ Funkcje specyficzne dla aplikacji +
+NVDA udostępnia dodatkowe funkcje dla niektórych aplikacji, aby uczynić niektóre zadania łatwiejszymi, lób udostępnić daną funkcjonalność, która w innym przypadku byłaby niedostępna dla użytkownika oprogramowania czytającego ekran.
+
+++ Microsoft Word ++
+
++++ Automatyczny odczyt nagłówków kolumn i wierszy +++
+NVDA może automatycznie odczytywać odpowiedni nagłówek wiersza i kolumny podczas nawigacji wewnątrz tabel w Microsoft Word.
+Wymaga to po pierwsze włączenia odczytywania nagłówków tabel w ustawieniach formatowania dokumentów NVDA.
+Po drugie, NVDA musi wiedzieć, która linia lub kolumna zawiera nagłówki.
+Po przejściu do pierwszej komórki wiersza lub kolumny zawierającej nagłówki, użyj poniższych komend:
+%kc:beginInclude
+|| Polecenie | Klawisz | Opis |
+| Ustaw nagłówki kolumny | NVDA+shift+c | Jednokrotne naciśnięcie informuje NVDA, że jest to pierwsza komórka nagłówkowa w wierszu zawierającym nagłówki kolumny, która powinna być automatycznie odczytywana, gdy przechodzimy między kolumnami poniżej tego wiersza. Dwukrotne naciśnięcie anuluje ustawienie. | 
+| Ustaw nagłówki wiersza | NVDA+shift+r | Jednokrotne naciśnięcie informuje NVDA, że jest to pierwsza komórka nagłówkowa w kolumnie zawierającej nagłówki wiersza, która powinna być automatycznie odczytywana podczas przechodzenia po wierszach za tą kolumną. Dwukrotne naciśnięcie anuluje ustawienie. | 
+%kc:endInclude
+Te ustawienia zostaną zapisane w dokumencie jako zakładki, kompatybilne z innymi programami czytania ekranu np. Jaws. 
+Oznacza to, że inni użytkownicy programów czytających ekran, będą automatycznie mieli te nagłówki ustawione, po otwarciu danego dokumentu później. 
+
++++ Tryb czytania w Microsoft Word +++
+Podobnie jak do stron internetowych, tryb czytania może być używany w Microsoft Word, co pozwala używać funkcji takich jak szybka nawigacja i lista elementów.
+%kc:beginInclude
+Aby włączyć lub wyłączyć tryb czytania w Microsoft Word, naciśnij NVDA+space.
+%kc:endInclude
+Więcej informacji o trybie czytania i szybkiej nawigacji , znajduje się w rozdziale [Tryb czytania #BrowseMode].
+
+++++ Lista elementów ++++
+%kc:beginInclude
+W trybie czytania w Microsoft Word, możesz uzyskać dostęp do listy elementów naciskając NVDA+f7.
+%kc:endInclude
+Lista elementów wyświetla nagłówki, linki i adnotacje (zawierające komentarze i śledzenie zmian).
+
++++ Zgłaszanie komentarzy +++
+%kc:beginInclude
+Aby odczytać komentarz na pozycji kursora, naciśnij NVDA+alt+c.
+%kc:endInclude
+ Wszystkie komentarze dokumentu oraz inne zmiany, mogą być wymienione na liście elementów NVDA po wybraniu adnotacji jako typu.
+ 
+++ Microsoft Excel ++
+
++++ Automatyczny odczyt nagłówków kolumn i wierszy +++
+NVDA może automatycznie odczytywać odpowiedni nagłówek wiersza i kolumny podczas nawigacji wewnątrz arkuszy w Microsoft Excel.
+Wymaga to po pierwsze włączenia odczytywania nagłówków tabel w ustawieniach formatowania dokumentów NVDA.
+Po drugie, NVDA musi wiedzieć, która linia lub kolumna zawiera nagłówki.
+Po przejściu do pierwszej komórki wiersza lub kolumny zawierającej nagłówki, użyj poniższych komend:
+%kc:beginInclude
+|| Działanie | Skrót klawiszowy | Opis |
+| Ustaw nagłówki kolumny | NVDA+shift+c | Jednokrotne naciśnięcie informuje NVDA, że jest to pierwsza komórka nagłówkowa w wierszu zawierającym nagłówki kolumny, która powinna być automatycznie odczytywana, gdy przechodzimy między kolumnami poniżej tego wiersza. Dwukrotne naciśnięcie anuluje ustawienie. | 
+| Ustaw nagłówki wiersza | NVDA+shift+r | Jednokrotne naciśnięcie informuje NVDA, że jest to pierwsza komórka nagłówkowa w kolumnie zawierającej nagłówki wiersza, która powinna być automatycznie odczytywana podczas przechodzenia po wierszach za tą kolumną. Dwukrotne naciśnięcie anuluje ustawienie. | 
+%kc:endInclude
+Te ustawienia zostaną zapisane w skoroszycie jako nazwane zakresy, kompatybilne z innymi programami czytającymi takimi jak Jaws.
+ Oznacza to, że inni użytkownicy oprogramowania czytającego ekran, którzy później otworzą ten skoroszyt, będą mieli te nagłówki już ustawione. 
+
++++ Lista elementów +++
+Podobnie jak na stronach internetowych, NVDA posiada listę elementów dla Microsoft Excel, która pozwala wyświetlić i uzyskać dostęp do kilku różnych typów informacji.
+%kc:beginInclude
+Aby otworzyć listę elementów w Excel, naciśnij NVDA+f7.
+%kc:endInclude
+Różne typy informacji na liście elementów to:
+- Wykres: wymienia wszystkie wykresy w skoroszycie. 
+Wybranie wykresu i naciśnięcie Enter lub przycisku "idź do" przeniesie punkt uwagi do tego wykresu, umożliwiając nawigację i odczyt strzałkami.
+- komentarz: wszystkie komórki w skoroszycie zawierające komentarze. 
+Są wyświetlanea dres komórki i jej komentarze. 
+Naciśnięcie Enter lub przycisku idź do, przeniesie punkt uwagi do wybranej komórki.
+- Formuła: Wymienia wszystkie komórki w skoroszycie, które zawierają formułę. 
+Wyświetlany jest adres komórki, oraz zawarta w niej formuła.
+Naciśnięcie Enter lub przycisku idź do, przeniesie punkt uwagi do wybranej komórki.
+- Arkusz: wyświetla wszystkie arkusze w skoroszycie. 
+Naciśnięcie F2 na liście arkuszy pozwala zmienić nazwę arkusza. 
+Naciśnięcie Enter lub przycisku idź do, przeniesie punkt uwagi do wybranego arkusza.
+-
+
++++ Zgłaszanie komentarzy +++
+%kc:beginInclude
+Aby odczytać komentarz zaznaczonej komórki, naciśnij NVDA+alt+c.
+%kc:endInclude
+ Wszystkie komentarze skoroszytu mogą być wymienione na liście elementów NVDA.
+
++++ Odczyt zablokowanych komórek +++
+Jeśli skoroszyt został zabezpieczony, może nie być możliwe przejście do niektórych komórek, które zostały zablokowane do edycji.
+%kc:beginInclude
+Aby przejść do zablokowanych komórek, przejdź do trybu czytania naciskając NVDA+space, a następnie użyj standardowych klawiszy Excel takich jak klawisze strzałek, aby przechodzić po wszystkich komórkach w aktualnym arkuszu.
+%kc:endInclude
+
+++ Microsoft PowerPoint ++
+%kc:beginInclude
+|| Działanie | Skrót klawiszowy | Opis |
+| Przełącz odczyt notatek mówcy | control+shift+s | W uruchomionym pokazie slajdów, komenda przełącza między notatkami mówcy, albo treścią slajdu. Przełącznik ma wpływ na to co czyta NVDA, nie zmienia treści wyświetlanych na ekranie. | 
+%kc:endInclude
+
+++ foobar2000 ++
+%kc:beginInclude
+|| polecenie | klawisz | opis
+| podaj pozostały czas | CTRL+shift+r | podaje czas pozostały do końca aktualnie odtwarzanego utworu. |
+%kc:endInclude
+
+Opisana komenda działa tylko dla domyślnego ustawienia formatowania linii statusu dla odtwarzacza.
+
+++ Miranda IM ++
+%kc:beginInclude
+|| Działanie | Skrót klawiszowy | Opis |
+| Zgłoś ostatnią wiadomość | NVDA+control+1-4 | Zgłasza jedną z ostatnich wiadomości, zależnie od naciśniętej cyfry; np. NVDA+control+2 odczyta przedostatnią wiadomość. |
+%kc:endInclude
+
+++ Poedit ++
+%kc:beginInclude
+|| Działanie | Skrót klawiszowy | Opis |
+| odczytaj okno komentarzy | Control+shift+c | czyta komentarze znajdujące się w oknie komentarzy. |
+| Odczytaj uwagi dla tłumaczy | control+shift+a | Zgłasza wszelkie uwagi dla tłumaczy. |
+%kc:endInclude
+
+++ Skype ++
+%kc:beginInclude
+Wewnątrz konwersacji:
+|| Działanie | Skrót | Opis |
+| Przejrzyj wiadomość | NVDA+control+1-0 | Odczytuje ostatnią wiadomość i przenosi do niej punkt przeglądu, zależnie od naciśniętej cyfry; np. NVDA+control+2 odczytuje wiadomość drugą od końca. |
+%kc:endInclude
+
++ Konfigurowanie NVDA +
+
+++ Menu ustawienia ++
+%kc:settingsSection: || Działanie | Skróty Klawiszowe Desktopa | Skróty Klawiszowe Laptopa | Opis |
+Większość ustawień NVDA może być zmieniona za pomocą okien dialogowych dostępnych poprzez podmenu Ustawienia z menu NVDA.
+W oknach dialogowych wszystkich ustawień NVDA, naciśnij przycisk OK, aby zaakceptować zmiany, jakie zostały wprowadzone.
+Aby anulować zmiany, naciśnij przycisk Anuluj lub klawisz Escape.
+Niektóre ustawienia można zmienić również za pomocą klawiszy skrótu, które są wymienione w stosownych rozdziałach poniżej.
+
+Uwaga: domyślnie nie wszystkie okna ustawień są dostępne za pomocą zdarzeń wejścia (skrótów klawiszowych, gestów dotykowych, etc.).
+Jeśli chcesz uzyskać dostęp do okien nie posiadających klawisza skrótu, użyj [Okna zdarzenia wejścia #InputGestures] aby zdefiniować własne zdarzenie wejścia otwierające to okno.
+
++++ Ogólne Ustawienia (NVDA+kontrol+g) +++
+Okno dialogowe Ustawienia Główne znajduje się w menu Ustawienia.
+Zawiera następujące opcje:
+
+==== Język ====
+Pole rozwijalne służące do wyboru języka komunikatów oraz interfejsu użytkownika NVDA.
+Dostępnych jest wiele języków, jednak domyślnie wybrana jest opcja "Domyślne". 
+Opcja ta powoduje, że NVDA automatycznie wybiera język interfejsu systemu Windows.
+
+Proszę zauważyć, że NVDA musi zostać zrestartowane po zmianie języka.
+Jeśli zmienisz język, NVDA zapyta, czy chcesz zrestartować program.
+Naciśnij Ok, a program uruchomi się ponownie.
+
+==== Zapisz ustawienia przed wyjściem ====
+Ta opcja, to pole wyboru. Jeśli jest zaznaczone, to NVDA automatycznie zapisze aktualne ustawienia przy wyjściu z programu.
+
+==== Pokaż opcje przy wyjściu z NVDA ====
+To pole wyboru pozwala zdecydować, czy przy wyjściu z NVDA pojawi się okno dialogowe z pytaniem o akcję, którą chcesz wykonać.
+Jeśli zaznaczone, przy próbie wyjścia z NVDA pojawi się pytanie, czy chcesz wyjść, uruchomić ponownie program, albo uruchomić ponownie z wyłączonymi dodatkami.
+Jeśli niezaznaczone, NVDA zakończy działanie natychmiast.
+
+==== Odtwarzaj dźwięk przy uruchamianiu i zamykaniu NVDA ====
+Ta opcja jest polem wyboru, które ustawia odtwarzanie dźwięków przy uruchamianiu i zamykaniu NVDA.
+
+==== Poziom logowania ====
+Pole rozwijalne pozwalające na ustawienie poziomu logowania (ile czynności wykonanych przez użytkownika ma trafić do pliku logów).
+Na ogół użytkownik nie powinien zmieniać tego ustawienia, ponieważ zapisywane jest niezbyt wiele informacji.
+Jeśli jednak chcesz przesłać zgłoszenie błędu, ta opcja może być użyteczna.
+
+==== Automatycznie uruchom NVDA po zalogowaniu się do systemu Windows ====
+Jeśli ta opcja jest włączona, NVDA uruchomi się automatycznie zaraz po zalogowaniu się do systemu.
+Opcja jest dostępna tylko dla zainstalowanych kopii NVDA.
+
+==== Użyj NVDA na ekranie logowania windows (wymagane są uprawnienia administratora) ====
+Jeśli logujesz się do systemu podając nazwę użytkownika i hasło, to zaznaczenie tej opcji sprawi, że NVDA będzie uruchamiał się automatycznie na ekranie logowania do systemu.
+Ta opcja jest dostępna tylko dla zainstalowanych kopii NVDA.
+
+==== Używaj obecnie zapisanych ustawień na ekranie logowania i innych zabezpieczonych ekranach (wymagane są uprawnienia administratora) ====
+Naciśnięcie przycisku "Używaj zapisanych ustawień NVDA na ekranie logowania i innych zabezpieczonych ekranach" kopiuje  zapisane wcześniej ustawienia użytkownika do katalogu systemowej konfiguracji NVDA, której NVDA używa na ekranie logowania do Windows, ekranie kontroli konta użytkownika (UAC), oraz innych zabezpieczonych ekranach.
+Aby skopiować w ten sposób wszystkie swoje ustawienia, po pierwsze zapisz aktualną konfigurację przy użyciu klawisza skrótu control+NVDA+c albo polecenia menu NVDA "Zapisz ustawienia".
+Ta opcja jest dostępna tylko dla zainstalowanych kopii NVDA.
+
+==== Sprawdzaj automatycznie, czy jest nowa wersja ====
+Gdy to pole wyboru jest zaznaczone, NVDA będzie automatycznie sprawdzał dostępność aktualizacji programu i poinformuje, jeżeli jakaś będzie dostępna.
+Możesz również sprawdzać dostępność aktualizacji ręcznie, poleceniem "Sprawdź aktualizacje" w menu Pomoc NVDA.
+
++++ Wybór Syntezatora (NVDA+kontrol+S) +++
+Okno dialogowe "Syntezator...", znajdujące się w menu "Ustawienia" , pozwala wybrać używany przez NVDA syntezator mowy.
+Po zaznaczeniu wybranego syntezatora, naciśnij przycisk "Ok" a NVDA załaduje go.
+Jeśli pojawi się błąd przy ładowaniu wybranego syntezatora, program NVDA powiadomi o tym wyświetlając komunikat i będzie używał syntezatora aktywnego poprzednio.
+
+==== Syntezator ====
+Ta opcja pozwala na wybór odpowiedniego syntezatora mowy, który będzie używany przez NVDA.
+
+Listę Syntezatorów, które obsługuje NVDA zobaczysz w rozdziale [Obsługiwane Syntezatory Mowy #SupportedSpeechSynths].
+
+Jeden specjalny element, który zawsze pojawi się na tej liście, to "bez mowy", który pozwala używać NVDA całkowicie bez komunikatów głosowych.
+Może to być przydatne dla kogoś chcącego używać NVDA tylko z monitorem brajlowskim, albo dla widzących twórców oprogramowania, którzy chcą używać wyłącznie funkcji "Podgląd mowy".
+ 
+==== Urządzenie wyjściowe ====
+Ta opcja pozwala na wybór karty dźwiękowej, przez którą będzie słychać wybrany syntezator NVDA.
+
++++ Ustawienia Głosu (NVDA+kontrol+v) +++[VoiceSettings]
+Okno dialogowe Ustawienia Głosu znajduje się w menu Ustawienia. Zawiera opcje, które pozwalają zmieniać brzmienie mowy.
+Szybszy alternatywny sposób regulacji parametrów mowy z dowolnego miejsca, możesz znaleźć w rozdziale [Szybka zmiana ustawień syntezatora #SynthSettingsRing].
+ 
+Okno dialogowe Ustawienia Głosu zawiera następujące opcje:
+
+==== Głos ====
+Pole rozwijalne służące do wyboru jednego z głosów dostępnych dla syntezatora aktualnie wybranego w NVDA.
+Za pomocą strzałek możesz przechodzić kolejno przez wszystkie głosy słuchając ich brzmienia.
+Strzałkami w lewo i w górę przesuwasz się w górę listy, a strzałkami w prawo i w dół przesuwasz się w dół.
+
+==== Wariant ====
+Jeśli korzystasz z dołączonego do NVDA syntezatora eSpeak, pole rozwijalne Wariant umożliwia zmianę brzmienia dla aktualnie używanego głosu.
+Warianty głosu Espeaka to w zasadzie różne głosy, jako że modyfikują one parametry brzmienia głosu Espeak.
+Niektóre warianty będą brzmieć jak mężczyzna, inne jak kobieta, a jeszcze inne - jak żaba.
+
+==== Prędkość ====
+Ta opcja pozwala na zmianę prędkości głosu.
+Jest to suwak służący do zmiany prędkości czytania w skali od 0 do 100, (0 oznacza tempo najwolniejsze, 100 najszybsze).
+
+==== Wysokość ====
+Ta opcja pozwala na zmianę wysokości aktualnego głosu.
+Jest to suwak, który zmienia wysokość głosu w skali od 0 do 100, (0 oznacza głos najniższy, 100 najwyższy).
+
+==== Głośność ====
+Jest to suwak służący do zmiany natężenia głosu w skali od 0 do 100, (0 oznacza głos najcichszy, 100 najgłośniejszy).
+
+==== Modulacja ====
+Jest to suwak służący do zmiany intonacji (unoszenia i opadania) głosu w skali od 0 do 100, (0 oznacza głos najbardziej monotonny, 100 najbardziej melodyjny). (Zmiana modulacji możliwa jest jedynie w przypadku syntezatora eSpeak.)
+
+==== automatycznie zmieniaj język ====
+To pole wyboru przełącza ustawienie automatycznej zmiany języka syntezatora w locie. Opcja ta działa tylko wówczas, gdy odpowiedni język jest zadeklarowany w kodzie dokumentu. 
+Domyślnie pole to jest zaznaczone.
+Aktualnie tylko syntezator Espeak obsługuję automatyczną zmianę języka .
+
+==== Automatycznie zmieniaj dialekt ====
+To pole wyboru pozwala ustalić, czy dialekt powinien być zmieniany w trakcie czytania. 
+Dla przykładu, jeśli czytamy dokument angielski głosem angielski amerykański, a dokument zawiera oznaczenia części tekstu jako angielski brytyjski, jeśli ta funkcja jest włączona - syntezator zmieni również sposób akcentowania.
+Ta opcja jest domyślnie wyłączona.
+
+%kc:setting
+==== poziom interpunkcji/symboli ====
+Skrót Klawiszowy: NVDA+p
+
+Ustawienie pozwala wybrać liczbę znaków i symboli, które powinny być wymawiane. 
+Jeśli ustawienie ma wartość "Wszystko", wszystkie symbole będą odczytywane.
+Dotyczy to wszystkich syntezatorów, nie tylko tego aktywnego w tym momencie.
+
+==== Ufaj językowi głosu przetwarzając znaki i symbole ====
+Domyślnie włączona, ta opcja informuje NVDA, że bieżący głos prawidłowo przetwarza znaki i symbole.
+Jeśli okaże się, że interpunkcja jest odczytywana w nieprawidłowym języku dla konkretnego głosu lub syntezatora, możesz tę opcję wyłączyć, aby zmusić NVDA do używania globalnie ustawionego języka.
+
+==== Wyższy głos dla wielkich liter ====
+To pole edycji pozwala ustawić o ile zmieni się wysokość głosu podczas czytania dużej litery. 
+Wartość podajemy w procentach - liczba dodatnia oznacza podwyższenie wysokości, liczba ujemna - obniżenie.
+Wartość 0 oznacza brak zmiany wysokości.
+
+==== Czytaj "duże" przed wielkimi literami ====
+Jeśli zaznaczysz tę opcję, NVDA będzie sygnalizować wielkie litery czytając słowo "Duże", dla każdej litery wypowiadanej jako pojedynczy znak, np. podczas literowania.
+Ta opcja przydatna jest przy korzystaniu z syntezatora, który nie potrafi zmieniać wysokości głosu.
+
+==== Dźwięk dla dużych liter ====
+Jeśli zaznaczysz tę opcję, NVDA będzie sygnalizować pojedyncze wielkie litery za pomocą krótkiego dźwięku.
+Opcja ta jest przydatna dla syntezatorów, które nie potrafią zmieniać wysokości głosu przy odczytywaniu wielkich liter.
+
+==== wykrywanie wymowy ====[VoiceSpellingFunctionality]
+Niektóre słowa zawierają tylko jeden znak, lecz wymowa rużni się w zależności od tego, czy wymawiamy daną literę jak słowo, czy jako literę samą w sobie.
+Przykładowo w języku angielskim "a" jest literą lub słowem i jest przy tym różnie wymawiana.
+To ustawienie sprawia, że syntezatory mowy uwzględniają ten fakt. 
+Ta funkcjonalność jest wspierana w większości syntezatorów.
+
+Ta opcja na ogół powinna być włączona.
+Niektóre syntezatory pracujące w standardzie Microsoft Speech API (SAPI)  nie obsługują prawidłowo tej funkcjonalności i zachowują się dziwnie, gdy jest ona włączona.
+Jeśli napotykasz na problemy z wymową pojedynczych znaków, spróbuj wyłączyć tę opcję.
+
++++ Szybka Zmiana Ustawień Syntezatora +++[SynthSettingsRing]
+Jeśli chcesz szybko zmienić ustawienia mowy bez wchodzenia do okna dialogowego "Ustawienia głosu", istnieją klawisze poleceń, które pozwalają w każdej chwili ustawiać najczęściej zmieniane ustawienia mowy:
+%kc:beginInclude
+|| Działanie | Skróty Klawiszowe Desktopa | Skróty Klawiszowe Laptopa | Opis |
+| Do następnych ustawień głosu | NVDA+kontrol+strzałka w prawo | NVDA+kontrol+shift+strzałka w prawo | Przechodzi do następnego parametru ustawień syntezatora, wracając do pierwszego po przejściu za ostatni. |
+| Do poprzednich ustawień głosu | NVDA+kontrol+strzałka w lewo | NVDA+shift+control+strzałka w lewo | Przechodzi do poprzedniego parametru ustawień syntezatora wracając do ostatniego po przejściu przed pierwszy. |
+| Zwiększ parametr ustawień głosu | NVDA+kontrol+strzałka w górę | NVDA+kontrol+shift+strzałka w górę | Zwiększa aktualnie wybrany parametr ustawień syntezatora np. przyśpiesza prędkość, wybiera następny głos, zwiększa głośność. |
+| Zmniejsz parametr ustawień głosu | NVDA+kontrol+strzałka w dół | NVDA+kontrol+shift+strzałka w dół | Zmniejsza aktualnie wybrany parametr ustawień syntezatora. Na przykład: zmniejsza szybkość, wybiera poprzedni głos, zmniejsza głośność. |
+%kc:endInclude
+
++++ Ustawienia Brajla +++
+Okno "Ustawienia Brajla" wywoływane jest w menu Ustawienia.
+
+==== Monitor brajlowski ====
+Pierwsza opcja w okienku dialogowym "Ustawienia brajla" to lista rozwijana "Monitor Brajlowski". 
+Jej zawartość jest zależna od tego, jakie sterowniki monitorów brajlowskich są zainstalowane w twoim systemie.
+Na liście przemieszczasz się między elementami przy użyciu klawiszy strzałek.
+
+"Bez brajla" oznacza, że nie używasz monitora brajlowskiego.
+
+Więcej informacji na temat obsługiwanych monitorów brajlowskich znajdziesz w rozdziale [Obsługiwane Monitory Brajlowskie #SupportedBrailleDisplays].
+
+==== port ====
+Ta opcja, jeśli jest dostępna, pozwala określić jaki port lub typ połączenia będzie użyty do komunikacji z monitorem brajlowskim.
+Jest to lista rozwijana, zawierająca elementy zależne od wybranego urządzenia.
+
+Domyślnie NVDA używa automatycznego wykrywania portów, co oznacza, że połączenie z monitorem brajlowskim zostanie nawiązane automatycznie poprzez wyszukanie monitora wśród dostępnych w systemie urządzeń Bluetooth i USB.
+Dla niektórych monitorów brajlowskich, będzie możliwe dokonanie wyboru, który port ma być użyty.
+Najczęściej spotykane możliwości to "Automatycznie" (opisana powyżej procedura automatycznego wykrywania urządzenia), "USB", "Bluetooth" i porty szeregowe, jeśli twój monitor brajlowski obsługuje ten rodzaj transmisji.
+
+Ta lista rozwijana nie pojawi się, jeśli twój monitor brajlowski obsługuje wyłącznie automatyczne wykrywanie portu.
+
+Możesz zajrzeć do sekcji omawiającej twój monitor brajlowski w rozdziale [Obsługiwane monitory brajlowskie #SupportedBrailleDisplays] aby poznać więcej szczegółów na temat wspieranych rodzajów komunikacji i dostępnych portów.
+
+==== Tabela wyjścia ====
+Następną opcją, na którą natrafisz w tym okienku dialogowym jest lista rozwijana "Tabela wyjścia".
+Możesz tu znaleźć tablice brajlowskie dla różnych języków, standardów i skrótów brajlowskich.
+Wybrana tablica będzie używana do translacji tekstu przed jego wyświetleniem na twoim monitorze brajlowskim.
+Między elementami tej listy przełączaj się przy użyciu klawiszy strzałek.
+
+==== Tabela wprowadzania ====
+W uzupełnieniu do poprzedniego ustawienia, następnym znajdującym się po nim jest lista rozwijana "Tabela wprowadzania".
+Wybrana tablica będzie używana do translacji na postać tekstu komputerowego znaków wprowadzanych na klawiaturze twojego monitora brajlowskiego.
+NVDA aktualnie obsługuje wprowadzanie w brajlu komputerowym, więc dostępne są jedynie 8-punktowe tablice brajlowskie.
+Między elementami tej listy przełączaj się przy użyciu klawiszy strzałek.
+
+Zwróć uwagę, że ta funkcja jest przydatna tylko wówczas, gdy twój monitor brajlowski posiada klawiaturę w stylu Perkins, a funkcja wprowadzania jest obsługiwana przez sterownik monitora brajlowskiego.
+Jeśli wprowadzanie nie jest możliwe na monitorze posiadającym klawiaturę, będzie to zaznaczone w rozdziale [Obsługiwane monitory brajlowskie #SupportedBrailleDisplays].
+
+==== Rozwiń słowo pod kursorem do brajla komputerowego ====
+Ta opcja umożliwia wyświetlenie słowa pod kursorem w formie nieskróconego brajla komputerowego.
+
+==== Tempo migania kursora ====
+Ta opcja jest polem liczbowym, które pozwala zmienić częstotliwość migania kursora wyrażoną w milisekundach.
+
+==== Czas wygasania komunikatów ====
+To ustawienie jest polem liczbowym określające w sekundach, jak długo na monitorze brajlowskim są wyświetlane komunikaty programu NVDA.
+Wprowadzenie wartości 0, wyłącza całkowicie wyświetlanie tych komunikatów.
+
+%kc:setting
+==== Brajl związany z ====[BrailleTether]
+Skrót Klawiszowy: NVDA+kontrol+t
+
+Ta opcja pozwala wybrać, czy monitor brajlowski będzie podążać za punktem uwagi, czy obiektem nawigatora/punktem przeglądu.
+
+==== czytaj akapitami ====
+Gdy zaznaczysz to pole, monitor brajlowski będzie wyświetlać tekst akapitami, nie liniami. 
+Ponadto, komendy  przejścia między liniami będą przenosić między akapitami. 
+Oznacza to, że nie musisz przewijać wyświetlania na końcu każdej linii, nawet gdy na samym monitorze brajlowskim  zmieści się więcej tekstu. 
+Może być to użyteczne do płynnego czytania większych porcji tekstu. 
+Opcja domyślnie jest wyłączona.
+
+==== Unikaj rozdzielania słów kiedy możliwe ====
+Gdy włączone,słowo zbyt długie, aby zmieścić się na końcu wyświetlacza, nie zostanie podzielone.
+Zamiast tego, pojawi się kilka spacji na końcu wyświetlacza.
+Po przesunięciu wyświetlania, możliwe będzie przeczytanie całego słowa.
+Nazywa się to czasem "zawijaniem słów".
+Jeśli słowo jest zbyt długie, by samo zmieściło się na wyświetlaczu, musi zostać podzielone.
+
+Jeśli opcja jest wyłączona, wyświetlona zostanie część słowa, tak duża jak to możliwe, a reszta zostanie obcięta.
+Po przesunięciu wyświetlacza, możliwe będzie przeczytanie reszty słowa.
+
+Włączenie tej opcji umożliwia bardziej płynne czytanie, ale zmusza do częstszego przewijania wyświetlacza.
+
++++ Ustawienia Klawiatury (NVDA+kontrol+k) +++
+Okno "Ustawienia klawiatury ..." znajduje się w menu ustawień nvda.
+Zawiera następujące opcje:
+
+==== Układ klawiatury ====
+Pole rozwijalne pozwalające wybrać układ klawiatury dla NVDA. Obecnie dostępne są dwa układy: laptop i Desktop (komputer stacjonarny).
+
+==== Użyj Capslock jako klawisza NVDA ====
+Jeśli zaznaczysz to pole, klawisz Caps Lock będzie pełnić rolę specjalnego klawisza NVDA.
+
+==== Użyj dodatkowego Insert jako klawisza NVDA ====
+Jeśli zaznaczysz to pole, dodatkowy Insert (na większości klawiatur znajdujący się nad klawiszami strzałek, obok Home i End) będzie pełnić rolę specjalnego klawisza NVDA.
+
+==== Użyj numerycznego Insert jako klawisza NVDA ====
+Jeśli zaznaczysz to pole, Insert na klawiaturze numerycznej będzie pełnić rolę specjalnego klawisza NVDA.
+
+Jeśli żaden klawisz nie został wybrany jako klawisz NVDA, nie będzie możliwy dostęp do niektórych funkcji programu.
+W związku z tym, przy zamykaniu okna dialogowego pojawi się stosowny komunikat o błędzie, jeśli wszystkie pola wyboru klawiszy NVDA są nieoznaczone i naciśnięto przycisk OK.
+Po zamknięciu okna z tym komunikatem, musisz wybrać przynajmniej jeden klawisz NVDA, aby prawidłowo zamknąć okno ustawień klawiatury.
+
+%kc:setting
+==== Czytaj pisane znaki ====
+Skrót Klawiszowy: NVDA+2
+
+Jeśli zaznaczysz to pole, NVDA będzie wymawiać pojedyncze znaki podczas wpisywania ich na klawiaturze.
+
+%kc:setting
+==== Czytaj pisane wyrazy ====
+Skrót Klawiszowy: NVDA+3
+
+Jeśli zaznaczysz to pole, NVDA będzie wymawiać całe wyrazy po ich wpisaniu z klawiatury.
+
+==== Przerwij mowę dla wpisywanych znaków ====
+Jeśli włączona, ta opcja spowoduje przerwanie mowy przy wpisaniu jakiegoś znaku. Opcja domyślnie włączona.
+
+==== Przerwa mowy dla klawisza Enter ====
+Jeśli włączona, ta opcja przerywa mowę za każdym razem, gdy naciśnięto klawisz Enter. Opcja domyślnie włączona.
+
+==== Zezwalaj na przeglądanie w trybie czytaj wszystko ====
+Jeśli włączona, niektóre polecenia nawigacyjne (takie jak klawisze szybkiej nawigacji w trybie czytania, albo przechodzenie po liniach i akapitach) nie przerywają odczytywania tekstu od kursora do końca dokumentu, a zamiast tego odczyt tekstu przeskakuje do nowej pozycji i jest kontynuowany.
+
+==== Dźwięk dla małych liter przy włączonym Capslock ====
+Jeśli opcja jest włączona, krótki dźwięk zostanie wygenerowany za każdym razem, gdy wciśnięto literę z shiftem przy włączonym Capslock.
+Na ogół wpisywanie liter z shiftem przy włączonym Capslock nie jest zamierzone i wynika z niewiedzy, że Capslock jest włączony.
+A zatem ostrzeżenie o tym fakcie może się okazać pomocne.
+
+%kc:setting
+==== Czytaj klawisze poleceń ====
+Skrót Klawiszowy: NVDA+4
+
+Jeśli zaznaczysz to pole, NVDA będzie wypowiadać naciskane klawisze, którym nie odpowiadają znaki pisarskie, na przykład klawisze funkcyjne lub kombinacje Kontrol+litera.
+
+==== Przetwarzaj klawisze z innych aplikacji ====
+Ta opcja pozwala kontrolować, czy naciśnięcia klawiszy generowane przez aplikacje takie jak klawiatury ekranowe i aplikacje rozpoznawania mowy, powinny być przetwarzane przez NVDA. 
+Opcja jest domyślnie włączona, aczkolwiek niektórzy użytkownicy mogą chcieć ją wyłączyć, np. aby pisać w języku wietnamskim przy użyciu programu Unikey - pozostawienie jej wówczas włączonej powodowałoby wprowadzanie nieprawidłowych znaków.
+
++++ Ustawienia Myszy (NVDA+kontrol+m) +++
+Okno "Ustawienia myszy..." znajduje się w menu ustawień NVDA.
+Zawiera następujące opcje:
+
+==== Informuj o zmianach kształtu wskaźnika ====
+Jeśli zaznaczysz to pole, NVDA będzie podawać, jaki kształt ma wskaźnik myszy za każdym razem, kiedy dojdzie do jego zmiany.
+Wskaźnik myszy w systemie Windows zmienia się, by przekazać dodatkowe informacje, na przykład gdy znajduje się nad edytowalnym tekstem lub gdy system jest zajęty podczas ładowania programu.
+
+%kc:setting
+==== Włącz śledzenie myszy ====
+Skrót Klawiszowy: NVDA+m
+
+Jeśli zaznaczysz to pole, NVDA będzie czytać tekst znajdujący się aktualnie pod wskaźnikiem myszy. Opcja ta pozwala na odnajdywanie informacji na ekranie poprzez poruszanie fizyczną myszą bez konieczności nawigowania po hierarchii obiektów.
+
+==== Rozdzielczość tekstu ====
+Jeśli śledzenie myszy jest włączone, ta opcja pozwala dokładnie określić ile tekstu znajdującego się aktualnie pod wskaźnikiem myszy zostanie wypowiedziane.
+Dostępne opcje to znak, słowo, wiersz i akapit.
+
+==== Podaj typ obiektu wskazanego myszą ====
+Jeśli zaznaczysz to pole, NVDA będzie informować o rodzaju obiektu wskazywanego myszą (np. przycisk, lista, pasek przewijania).
+
+==== Sygnalizuj dźwiękiem położenie myszy ====
+Jeśli zaznaczysz to pole, NVDA będzie generować dźwięki podczas poruszania myszą, ułatwiając określenie pozycji wskaźnika na ekranie.
+Im wyżej mysz jest na ekranie, tym wyższy będzie dźwięk.
+Im bardziej po lewej lub prawej stronie ekranu znajduje się wskaźnik myszy, tym bardziej po lewej lub prawej stronie będzie słychać dźwięk (jeśli użytkownik ma podłączone stereofoniczne słuchawki lub głośniki).
+
+==== Głośność dźwięku myszy zależy od jasności obrazu ====
+Jeśli zaznaczysz to pole, dźwięki sygnalizujące położenie myszy będą tym głośniejsze, im jaśniejszy jest obraz znajdujący się w miejscu wskaźnika. Opcja ta ma znaczenie tylko, jeśli włączona jest funkcja "Sygnalizuj dźwiękiem położenie myszy". 
+Funkcja domyślnie jest wyłączona.
+
++++ Ustawienia punktu przeglądu +++
+Okno "Ustawienia punktu przeglądu..." znajduje się w menu ustawień nvda.
+Zawiera następujące opcje:
+
+%kc:setting
+==== Śledź punkt uwagi ====
+Skrót Klawiszowy: NVDA+7
+
+Gdy opcja jest włączona, kursor przeglądu zawsze zostanie umieszczony w tym samym obiekcie, w którym znajduje się punkt uwagi, gdy aktualny punkt uwagi się zmieni.
+
+%kc:setting
+==== Śledź kursor systemu ====
+Skrót Klawiszowy: NVDA+6
+
+Gdy opcja jest włączona, kursor przeglądu zostanie automatycznie przeniesiony przy każdym ruchu na pozycję kursora systemu, gdy jego pozycja się zmieni.
+
+==== Śledź wskaźnik myszy ====
+Gdy opcja jest włączona, kursor przeglądu będzie przesuwać się do wskaźnika myszy przy każdej zmianie jego położenia.
+
+==== Tryb prostego przeglądania ====
+Gdy opcja jest włączona, NVDA będzie filtrować hierarchie obiektów, którymi można nawigować, aby wykluczyć bezużyteczne obiekty np. obiekty niewidoczne, albo używane tylko do tworzenia układu treści.
+
++++ Ustawienia: Prezentacja Obiektów (NVDA+kontrol+o) +++
+Okno "Prezentacja Obiektów..." znajduje się w menu ustawień nvda.
+Zawiera następujące opcje:
+
+==== Czytaj dymki podpowiedzi ====
+Jeśli zaznaczysz to pole, NVDA będzie czytać pojawiające się dymki podpowiedzi (tooltip).
+Są to niewielkie wiadomości wyświetlane często po wskazaniu myszą lub przeniesieniu punktu uwagi na dane okno lub kontrolkę.
+
+==== Czytaj dymki powiadomień ====
+Jeśli zaznaczysz to pole, NVDA będzie czytać informacje pojawiające się w postaci dymków w obszarze powiadomień systemu Windows.
+Dymki powiadomień są podobne do dymków podpowiedzi, jednak zazwyczaj są większe i sygnalizują zdarzenia systemowe, takie jak odłączenie kabla sieciowego czy brak ochrony antywirusowej, lób inne zdarzenia mające znaczenie dla bezpieczeństwa systemu.
+
+==== Odczytuj klawisze skrótów ====
+Jeśli zaznaczysz to pole, NVDA informując o obiektach, pozycjach menu lub kontrolkach okien dialogowych będzie wypowiadać również związany z nimi klawisz skrótu. 
+Dla przykładu, menu plik może mieć przypisany skrót alt+p.
+
+==== Odczytuj położenie obiektów ====
+Ta opcja pozwala zmienić sposób ogłaszania pozycji obiektu po przejściu do obiektu z punktem uwagi lub obiektu nawigacji (np. 1 z 4).
+
+==== odgadnij położenie obiektu, gdy nie dostępne ====
+Gdy włączona jest opcja powiadamiania o położeniu obiektu, a z przyczyn technicznych jest ono niedostępne dla NVDA w aktualnej kontrolce, nvda może próbować je odgadnąć.
+
+Gdy opcja powyższa jest zaznaczona, nvda może odczytywać informacje o pozycji w większej ilości obiektów, jak niektóre paski narzędziowe czy menu, lecz informacje te mogą być nieco niedokładne.
+
+==== Odczytuj opisy obiektów ====
+Odznacz to pole, jeśli nie chcesz, by program NVDA czytał opisy obiektów.
+
+%kc:setting
+==== Sygnał paska postępu ====
+Skrót Klawiszowy: NVDA+u
+
+Ta opcja określa w jaki sposób NVDA sygnalizuje aktualizację paska postępu.
+
+Dostępne są następujące opcje:
+- Wyłączone: Nie będzie sygnalizowana żadna zmiana paska postępu.
+- Mowa: Ta opcja instruuje NVDA, by zmiany pasków postępu były wypowiadane mową. Po każdej zmianie paska postępu, NVDA będzie wymawiać nową wartość.
+- Dźwięk: Oznacza, że NVDA użyje sygnału dźwiękowego przy każdej zmianie paska postępu. Im wyższy dźwięk, tym bliżej jest do końca paska postępu.
+- Mowa i dźwięk: Ta opcja oznacza informowanie jednocześnie dźwiękiem i mową, gdy pasek postępu się aktualizuje.
+-
+
+==== Sygnalizuj zmiany na paskach postępu będących w tle ====
+Jest to opcja, która - gdy zaznaczona - sprawia, że NVDA śledzi zmiany paska postępu, nawet jeśli fizycznie pasek ten nie jest na pierwszym planie.
+Jeśli zminimalizujesz okno zawierające pasek postępu, albo przełączysz się do innego okna, NVDA i tak będzie informował o postępach tego paska.
+
+%kc:setting
+==== Informuj o dynamicznych zmianach treści ====
+Skrót Klawiszowy: NVDA+5
+
+Przełącza ogłaszanie nowej treści w niektórych obiektach takich jak terminale albo okienko historii w komunikatorach.
+
++++ Ustawienia układu wprowadzania +++
+Okno ustawień układu wprowadzania wywoływane jest z menu Ustawienia.
+Ustawienia te pozwalają określić w jaki sposób NVDA kontroluje wprowadzanie znaków azjatyckich za pomocą  IME lub  usług tekstowych.
+Ponieważ metody wprowadzania bardzo się różnią dostępnymi właściwościami oraz sposobem przekazywania informacji, najprawdopodobniej będzie konieczne skonfigurowanie tych opcji indywidualnie dla każdej metody wprowadzania, aby uzyskać największą wygodę pisania.
+
+==== Automatycznie zgłaszaj wszystkie dostępne znaki kandydujące ====
+Ta opcja, domyślnie włączona,  pozwala określić czy wszystkie widoczne znaki kandydujące powinny być automatycznie odczytane gdy pojawia się lista znaków kandydujących, albo jej strona się zmienia.
+Włączenie tej opcji dla piktograficznych metod wprowadzania, takich jak chińska nowa ChangJie albo Boshiami jest przydatne, ponieważ możesz automatycznie usłyszeć wszystkie symbole, ich numery i od razu któryś wybrać.
+Natomiast dla fonetycznych metod wprowadzania, takich jak chińska nowa fonetyczna, może okazać się lepsze wyłączenie tej opcji, ponieważ wszystkie symbole będą brzmieć tak samo i będziesz musiał użyć strzałek do przejścia po liście aby uzyskać więcej informacji z opisów znaków każdego kandydata.
+
+==== Czytaj wybrany znak kandydujący ====
+Ta opcja, domyślnie włączona, pozwala określić czy NVDA powinien ogłaszać wybrany znak kandydujący, gdy pojawia się lista znaków kandydujących lub zaznaczenie się zmieni.
+Dla metod wprowadzania, w których zaznaczenie może zostać zmienione klawiszami strzałek (takich jak chińska nowa fonetyczna) jest to konieczne, ale dla innych metod wprowadzania może okazać się wygodniejsze wpisywanie z wyłączoną tą opcją.
+Uwaga: nawet po wyłączeniu tej opcji, punkt przeglądu będzie wciąż umieszczany na wybranym znaku kandydującym, pozwalając użyć obiektu nawigacji / przeglądu dla ręcznego odczytania tego lub innych znaków kandydujących.
+
+==== Zawsze ogłaszaj krótki opis znaku kandydującego ====
+Ta opcja, domyślnie włączona, pozwala określić czy NVDA powinien odczytać krótki opis każdego znaku kandydującego, gdy zostanie on zaznaczony, lub będzie odczytany automatycznie po pojawieniu się listy kandydatów.
+Uwaga: dla ustawień regionalnych takich jak chiński, ogłaszanie dodatkowych opisów wybranego znaku kandydującego działa niezależnie od ustawienia tej opcji.
+Ta opcja może być użyteczna dla metod wprowadzania koreańskiego lub japońskiego.
+
+==== Ogłaszaj zmiany w łańcuchu czytania ====
+Niektóre metody wprowadzania, np. chińska nowa fonetyczna, albo nowa ChangJie posiadają łańcuch czytania (czasem znany jako ciąg prekompozycyjny).
+Dzięki tej opcji możesz określić, czy nowe znaki dodawane do tego łańcucha powinny być odczytywane przez NVDA.
+Opcja jest domyślnie włączona.
+Uwaga: niektóre starsze metody wprowadzania, takie jak chińska ChangJie mogą nie używać łańcucha czytania do przechowywania znaków prekompozycyjnych, a zamiast tego bezpośrednio używać łańcucha kompozycyjnego. Następna opcja omawia konfigurowanie odczytu łańcucha kompozycyjnego.
+
+==== Zgłaszaj zmiany w ciągu składowym ====
+Po tym jak dane z łańcucha czytania lub ciągu prekompozycyjnego uformowały prawidłowy symbol piktograficzny, większość metod wprowadzania umieszcza ten symbol w ciągu składowym dla tymczasowego przechowania razem z  innymi utworzonymi symbolami, zanim ostatecznie trafią one do dokumentu.
+Ta opcja pozwala określić, czy NVDA powinien ogłaszać nowe znaki dodawane do ciągu składowego.
+Opcja jest domyślnie włączona.
+
++++ Ustawienia: Tryb czytania (NVDA+kontrol+b) +++
+Okno ustawień "Tryb czytania..." znajduje się w menu ustawień nvda.
+
+Zawiera następujące opcje:
+
+==== Maksymalna liczba znaków w linii ====
+To pole określa maksymalną długość linii trybu czytania (w znakach).
+
+==== Maksymalna liczba linii na stronie ====
+Ustala ilość linii, które zostaną przeskoczone po wciśnięciu page up lub page down w trybie czytania.
+
+%kc:setting
+==== Użyj układu ekranu ====
+Skrót Klawiszowy: NVDA+v
+
+Ta opcja pozwala określić, czy zawartość oglądana w trybie czytania, taka jak linki i inne pola, powinna trafiać do osobnych linii, czy też powinna zostać utrzymana w układzie zbliżonym do wizualnego rozmieszczenia elementów na ekranie. 
+
+==== automatycznie czytaj wszystko przy wczytywaniu strony ====
+Ta opcja przełącza automatyczne odczytywanie strony po jej załadowaniu w trybie czytania.
+Domyślnie opcja jest zaznaczona.
+
+==== Informuj o tabelach układu treści ====
+Ta opcja określa jak NVDA traktuje tabele używane wyłącznie do wizualnego rozmieszczenia treści.
+Gdy jest włączona, NVDA będzie je traktować jak normalne tabele, zgłaszając je w oparciu o [Ustawienia formatowania dokumentów #DocumentFormattingSettings] i przechodząc do nich przy użyciu komend szybkiej nawigacji.
+Gdy opcja jest wyłączona - nie będą zgłaszane, ani wyszukiwane w szybkiej nawigacji.
+Zawartość tych tabel będzie jednak nadal dostępna jako tekst.
+Ta opcja jest domyślnie wyłączona.
+
+==== Konfiguracja ogłaszania pól, takich jak linki i nagłówki ====
+Proszę przejrzeć opcję w [Ustawieniach formatowania dokumentu #DocumentFormattingSettings] aby skonfigurować informacje, które są ogłaszane w trakcie nawigacji, takie jak linki, nagłówki i tabele.
+
+==== Automatyczny tryb formularza przy zmianie punktu uwagi ====
+Ta opcja pozwala na wywołanie trybu formularza z trybu czytania, gdy zmieni się punkt uwagi. Jeśli naciskając TAB znajdziesz się we formularzu, a ta opcja jest zaznaczona, nvda automatycznie przejdzie do trybu formularza.
+Dla przykładu: gdy na stronie internetowej naciśnięcie klawisza Tab spowoduje przejście do pola formularza,  tryb formularza zostanie automatycznie włączony, jeśli ta opcja jest zaznaczona.
+
+==== Automatyczny tryb formularza przy ruchach kursora ====
+Opcja ta, gdy zaznaczona, powoduje automatyczne wejście i wyjście z trybu formularza za pomocą klawiszy strzałek.
+Na przykład, gdy poruszając się strzałkami po stronie internetowej natrafisz na pole edycyjne, nvda automatycznie przejdzie w tryb formularza. Gdy natomiast naciśniesz w formularzu strzałkę w dół i wyjdziesz poza kontrolkę, nvda powróci do trybu czytania.
+
+==== Sygnalizuj dźwiękiem tryby przeglądania ====
+Jeśli ta opcja jest włączona, NVDA będzie sygnalizować dźwiękiem przełączanie się między trybem czytania i trybem formularza, zamiast ogłaszać te zmiany mową.
+
+==== Nie przekazuj do dokumentu zdarzeń wejścia nie będących poleceniami ====
+Domyślnie włączone, to ustawienie pozwala zdecydować, że zdarzenia wejścia, (takie jak naciskane klawisze) które nie są poleceniami NVDA, ani nie wyglądają na polecenia aplikacji, powinny być nieprzekazywane do dokumentu, w którym znajduje się punkt uwagi. 
+Dla przykładu: jeśli to ustawienie jest włączone i naciśnięto literę j, zostanie ona zignorowana, ponieważ nie jest komendą szybkiej nawigacji i nie wydaje się być poleceniem aplikacji.
+
++++ Formatowanie Dokumentów (NVDA+kontrol+d) +++[DocumentFormattingSettings]
+Okno "Formatowanie Dokumentów ..." znajduje się w menu ustawień nvda.
+
+Większość pól wyboru w tym oknie dialogowym służy do konfiguracji, jaki rodzaj formatowania chcesz usłyszeć automatycznie podczas poruszania się kursorem po dokumentach.
+Jeśli np. zaznaczysz pole wyboru "Odczytuj nazwy czcionek", to za każdym razem gdy kursor znajdzie się na tekście z inną czcionką, nazwa tej czcionki zostanie odczytana.
+
+Możemy w ten sposób skonfigurować odczytywanie:
+- Nazw czcionek
+- Rozmiaru czcionki
+- Atrybutów czcionki
+- Wyrównania tekstu
+- Kolorów
+- Zmian edycyjnych
+- Podkreślenia
+- Stylu tekstu
+- Błędów pisowni
+- Numerów stron
+- Numerów linii
+- Wcięć
+- Wcięć akapitu (np. wysunięcie, wcięcie pierwszej linii)
+- Tabel
+- Nagłówków kolumn i wierszy tabeli
+- Współrzędnych komórek tabeli
+- Linków
+- Nagłówków
+- List
+- Cytatów
+- Punktów orientacyjnych
+- Ramek
+- Gdy coś jest klikalne
+-
+
+Aby przełączać te ustawienia z każdego miejsca, proszę określić własne zdarzenia wejścia w [oknie zdarzenia wejścia #InputGestures].
+
+==== Uwzględniaj formatowanie za kursorem ====
+Jeśli opcja jest włączona, to NVDA spróbuje wykryć wszystkie zmiany formatowania w odczytywanej linii, nawet jeśli to pogorszy wydajność NVDA.
+
+Domyślnie NVDA wykryje formatowanie na pozycji Kursora Systemu / punktu Przeglądu, a w niektórych przypadkach może wykryć formatowanie reszty wierszy, ale tylko wtedy gdy nie będzie to powodować spadku wydajności.
+ 
+Włącz tę opcję, by przeprowadzić korektę dokumentów w aplikacjach takich jak Microsoft Word, gdzie formatowanie jest bardzo ważne.
+
++++ Słowniki wymowy +++
+Menu słowniki wymowy (znajdujące się w menu Ustawienia) zawiera polecenia otwierające okna dialogowe, które pozwalają zarządzać sposobem w jaki NVDA wypowiada określone słowa lub frazy.
+Obecnie istnieją trzy rodzaje słowników mowy. 
+Są to:
+- Słownik domyślny: wpisy tego słownika mają wpływ na całą wymowę w NVDA.
+- Słownik głosu: reguły w tym słowniku mowy wpływają na aktualnie używany głos syntezatora
+- Słownik Tymczasowy: wpisy tego słownika mają wpływ na całą wymowę w NVDA, ale tylko dla bieżącej sesji. Reguły te są tymczasowe i zostaną utracone, jeśli NVDA zostanie ponownie uruchomiony.
+-
+
+Musisz określić własne zdarzenia wejścia używając [okna zdarzenia wejścia #InputGestures] jeśli chcesz otwierać któreś z tych okien z każdego miejsca.
+
+Okno dialogowe każdego słownika zawiera listę zdefiniowanych reguł wymowy.
+Znajdują się tam również przyciski Dodaj, Edytuj i Usuń.
+
+Aby dodać nową regułę do słownika, naciśnij przycisk Dodaj, a następnie wypełnij pola w wyświetlonym oknie dodawania reguły, i naciśnij przycisk OK.
+Nową regułę zobaczysz na liście reguł.
+ aby jednak upewnić się, że reguła została zapisana naciśnij przycisk OK, aby zamknąć okno słownika po zakończeniu edycji.
+
+Reguły słowników mowy NVDA pozwalają zamienić jeden ciąg znaków na inny.
+Prosty przykład: chcemy, aby zamiast słowa "ptak", NVDA czytał słowo "żaba".
+Najprostszym sposobem na to jest wpisanie słowa ptak w polu wzorzec, a słowa żaba w polu Zamiana w oknie dialogowym Dodaj regułę.
+Można także wpisać opis reguły w polu komentarz (np. zamiana słowa ptak na żaba).
+
+Słowniki mowy w NVDA mają jednak o wiele więcej możliwości niż tylko proste zamiany słów.
+Okno dodawania reguły zawiera pole wyboru "Uwzględniaj wielkość liter", a jego zaznaczenie sprawi, że NVDA będzie przy stosowaniu reguły zwracał uwagę na to, czy tekst jest wpisany dużymi, czy małymi literami. 
+Domyślnie NVDA ignoruje różnice w wielkości liter.
+
+Zestaw przycisków opcji pozwala określić, czy wpisany wzorzec powinien pasować gdziekolwiek, tylko jako całe słowo, albo powinien być traktowany jako "wyrażenie regularne".
+Ustawienie, aby wzorzec pasował jako całe słowo oznacza, że zastąpienie zostanie wykonane tylko jeśli wzorzec nie pojawia się jako część większego słowa; tj. znak inny niż znak alfanumeryczny lub podkreślenie (albo żaden znak) występuje od razu przed i po wzorcu.
+Wracając do wcześniejszego przykładu zamiany "ptak" na "żaba", jeśli reguła zostałaby ustawiona jako zastąpienie całego słowa, nie zastąpiłaby słowa "ptaki".
+
+Wyrażenie regularne jest to wzorzec zawierający specjalne symbole, które pozwalają na dopasowanie więcej niż jednego znaku jednocześnie, mogą to być np. cyfry, lub litery.
+Wyrażenia regularne nie są opisane w tym podręczniku, ale wiele podręczników na ich temat można znaleźć w internecie.
+
++++ Wymowa znaków i symboli +++[SymbolPronunciation]
+To okno dialogowe pozwala określić w jaki sposób NVDA wypowiada konkretne znaki czy inne symbole. Pozwala także ustawić poziom interpunkcji, przy którym są one wypowiadane.
+
+Język, którego wymowa jest edytowana, będzie wyświetlony w tytule okna dialogowego.
+Uwaga: to okno uwzględnia opcję "Ufaj językowi głosu przetwarzając znaki i symbole" znajdującą się w [Oknie ustawień głosu #VoiceSettings]; tj. gdy ta opcja jest włączona, używa języka głosu zamiast globalnego języka NVDA.
+
+Aby zmienić symbol, najpierw zaznacz go na liście. 
+
+- Pole zamień określa tekst, który powinien być wypowiadany zamiast tego znaku. 
+- Używając listy poziom, można regulować najniższy poziom interpunkcji, na którym dany znak będzie wypowiadany. 
+- Pole wyślij rzeczywisty symbol do syntezatora określa, czy sam symbol (w przeciwieństwie do jego zastępnika) powinien zostać wysłany do syntezatora.
+Jest to przydatne, jeśli symbol powoduje pauzę w odczycie, albo zmianę intonacji głosu.
+Dla przykładu przecinek powoduje krótką pauzę syntezatora.
+Istnieją trzy opcje:
+ - Nigdy: Nigdy nie wysyłaj rzeczywistego symbolu do syntezatora.
+ - zawsze: zawsze wysyłaj rzeczywisty symbol do syntezatora.
+ - tylko poniżej poziomu symbolu: wyślij rzeczywisty symbol tylko wtedy, gdy poziom interpunkcji jest niższy niż poziom symbolu.
+ Można tego użyć, aby symbol miał tekstowy odpowiednik wypowiadany na wyższych poziomach interpunkcji bez powodowania pauzy, a był identyfikowany pauzą na niższych poziomach.
+ -
+-
+
+Możesz dodać nowe symbole po naciśnięciu przycisku "Dodaj".
+W okienku, które się pojawi, wprowadź symbol i naciśnij Ok.
+Następnie zmodyfikuj pozostałe pola, tak jak przy innych symbolach.
+
+Możesz usunąć symbol, naciskając przycisk "Usuń".
+
+Aby zapisać zmiany kliknij przycisk ok, aby je odrzucić - kliknij Anuluj.
+
++++ Zdarzenia wejścia +++[InputGestures]
+W tym oknie dialogowym możesz skonfigurować komendy NVDA uruchamiane przez zdarzenia wejścia (klawisze naciskane na klawiaturze, przyciski na monitorze brajlowskim, etc.).
+
+Pokazywane są tylko polecenia, które mają zastosowanie bezpośrednio przed otwarciem tego okna.
+Dla przykładu, jeśli chcesz skonfigurować polecenia związane z trybem czytania, powinieneś otworzyć okno zdarzeń wejścia, gdy znajdujesz się w trybie czytania.
+
+Drzewo w tym oknie wyświetla wszystkie dostępne polecenia NVDA podzielone na kategorie.
+Możesz je filtrować wpisując w pole edycyjne filtru jedno lub więcej słów występujących w nazwie polecenia.
+Jakiekolwiek zdarzenia wejścia powiązane z poleceniem, są wyświetlone poniżej tego polecenia.
+
+Aby dodać zdarzenie wejścia do polecenia, wybierz polecenie i kliknij przycisk "Dodaj".
+Następnie wprowadź zdarzenie wejścia, które chcesz powiązać; np. naciśnij klawisz na klawiaturze, albo przycisk na monitorze brajlowskim.
+Często zdarzenie wejścia może zostać zinterpretowane na wiele sposobów.
+Dla przykładu, jeśli nacisnąłeś klawisz, możesz wymagać, aby był on powiązany z aktualnym układem klawiatury (np. desktop lub laptop) albo stosować go dla wszystkich układów klawiatury.
+W takim przypadku pojawi się menu umożliwiające wybór pożądanej opcji.
+
+Aby usunąć powiązanie zdarzenia wejścia z poleceniem, wybierz to zdarzenie i naciśnij przycisk "Usuń".
+
+Po zakończeniu wprowadzania zmian, naciśnij przycisk OK aby je zachować, albo przycisk Anuluj, aby odrzucić.
+
+++ Zapisywanie i Przywracanie Ustawień ++
+NVDA domyślnie zapisuje ustawienia automatycznie przy wyjściu z programu.
+To zachowanie może zostać wyłączone w okienku "Ustawienia ogólne".
+ Aby ręcznie zapisać ustawienia w każdej chwili, użyj polecenia "Zapisz ustawienia" w menu NVDA.
+
+Jeśli przez pomyłkę zmienisz ustawienia programu, możesz skorzystać z opcji "Przywróć zapisane ustawienia" dostępnej z menu NVDA.
+Możesz również przywrócić konfigurację do ustawień fabrycznych, wybierając w menu NVDA polecenie "Zresetuj konfigurację do ustawień fabrycznych".
+
+Przydatne są także następujące klawisze poleceń NVDA:
+%kc:beginInclude
+|| Działanie | Skróty Klawiszowe Desktopa | Skróty Klawiszowe Laptopa | Opis |
+| Zapisz ustawienia | NVDA+kontrol+c | NVDA+kontrol+c | Zapisuje aktualne ustawienia, tak aby ich nie stracić po zamknięciu NVDA. |
+| Przywróć zapisane ustawienia | NVDA+kontrol+r | NVDA+kontrol+r | Naciśnięty raz, przywraca ostatnio zapisane ustawienia. Naciśnięty szybko 3-krotnie, przywraca ustawienia fabryczne |
+%kc:endInclude
+
+++ Profile konfiguracji ++
+Czasem może być przydatne posiadanie różnych ustawień dla różnych sytuacji.
+Dla przykładu: możesz chcieć mieć włączone ogłaszanie wcięć podczas edycji, albo zgłaszanie atrybutów czcionek podczas poprawiania tekstu.
+NVDA pozwala to osiągnąć za pomocą profili konfiguracyjnych.
+
+Profil konfiguracyjny zawiera tylko te ustawienia, które zostały zmienione podczas edycji profilu.
+Większość ustawień może być zmieniona w profilach konfiguracyjnych, wyłączając ustawienia znajdujące się w oknie Ustawienia ogólne, które mają zastosowanie do całego programu.
+
+Profile konfiguracyjne mogą być aktywowane ręcznie.
+Mogą być również aktywowane automatycznie przez wyzwalacze, takie jak przejście do określonej aplikacji.
+
++++ Podstawowe zarządzanie +++
+Profilami zarządzasz wybierając polecenie "Profile konfiguracji" w menu NVDA.
+Możesz zrobić to również za pomocą skrótu klawiszowego:
+%kc:beginInclude
+- NVDA+control+p: wyświetl okno profili konfiguracji.
+-
+%kc:endInclude
+
+Lista w tym oknie dialogowym, zawiera wszystkie dostępne profile.
+Po otwarciu okna, domyślnie wybrany jest aktualnie edytowany profil.
+Dla profili aktywnych wyświetlane są również dodatkowe informacje, określające, czy są ręcznie aktywowane, aktywowane przez wyzwalacze i/lub będące w trakcie edycji.
+
+Aby zmienić nazwę lub usunąć profil, naciśnij odpowiedni przycisk w oknie dialogowym.
+
+Naciśnij przycisk Zamknij, aby zamknąć okno.
+
++++ Tworzenie profilu +++
+Aby utworzyć profil, naciśnij przycisk "Nowy"..
+
+W oknie nowego profilu, możesz określić jego nazwę.
+Możesz również wybrać, jak ten profil powinien być używany.
+Jeśli chcesz aktywować go tylko ręcznie, wybierz aktywację ręczną (ustawienie domyślne).
+W innym wypadku wybierz wyzwalacz, który powinien uruchamiać ten profil.
+Dla ułatwienia, jeśli nie wybrałeś nazwy profilu, wybór wyzwalacza automatycznie wypełni pole nazwy.
+Zobacz [poniżej #ConfigProfileTriggers] aby uzyskać więcej informacji o wyzwalaczach.
+
+Naciśnięcie przycisku OK spowoduje utworzenie profilu i zamknięcie okna profili konfiguracji abyś mógł edytować utworzony profil.
+
++++ Ręczna aktywacja +++[ConfigProfileManual]
+Możesz ręcznie aktywować profil, wybierając go na liście i naciskając przycisk Aktywuj ręcznie.
+Po aktywacji, inne profile będą mogły być aktywowane przez wyzwalacze, ale każde ustawienie obecne w profilu ręcznie aktywowanym będzie nadrzędne.
+Dla przykładu, jeśli profil został uruchomiony przez wyzwalacz dla aktualnej aplikacji i zgłaszanie linków jest włączone w tym profilu, ale wyłączone w profilu ręcznie aktywowanym, linki nie będą zgłaszane.
+Jeśli jednak zmieniłeś głos w profilu uruchomionym przez wyzwalacz, ale nie zmieniałeś głosu w profilu ręcznie aktywowanym, użyty będzie głos z profilu automatycznie aktywowanego przez wyzwalacz.
+Wszystkie dokonane zmiany zostaną zapisane w profilu ręcznie aktywowanym.
+Aby unieaktywnić ręcznie aktywowany profil, wybierz go w oknie profili konfiguracji i naciśnij przycisk Dezaktywuj.
+
++++ Wyzwalacze +++[ConfigProfileTriggers]
+Naciśnięcie przycisku Wyzwalacze w oknie profili konfiguracji, pozwala zmienić profile, które powinny być aktywowane automatycznie.
+
+Lista wyzwalaczy wyświetla dostępne wyzwalacze, które są następujące:
+- Aktualna aplikacja: uruchamiany, gdy przełączysz się do aktualnej aplikacji.
+- Czytaj wszystko: aktywowany podczas czytania poleceniem Czytaj wszystko.
+-
+
+Aby zmienić profil, który powinien być automatycznie aktywowany przez wyzwalacz, wybierz wyzwalacz, a następnie wybierz pożądany profil na liście profili.
+Możesz wybrać (konfiguracja normalna) jeśli nie chcesz, aby profil był używany.
+
+Naciśnij przycisk Zamknij, aby powrócić do profili konfiguracji.
+
++++ Edycja profilu +++
+Jeśli aktywowałeś ręcznie jakiś profil, każda zmiana ustawień zostanie zapisana w tym profilu.
+W przeciwnym wypadku, każda zmiana ustawień zostanie zapisana do profilu ostatnio aktywowanego przez wyzwalacz.
+Dla przykładu: jeśli masz profil konfiguracyjny skojarzony z Notatnikiem i przełączysz się do notatnika, jakiekolwiek zmienione ustawienie zostanie zapisane do profilu.
+Jeśli żaden profil nie jest aktywowany ręcznie ani automatycznie, wszystkie zmienione ustawienia zostaną zapisane w normalnym pliku konfiguracyjnym.
+
+Aby edytować profil skojarzony z funkcją czytaj wszystko, musisz [aktywować ręcznie #ConfigProfileManual] ten profil.
+
++++ Tymczasowe wyłączenie wyzwalaczy +++
+Czasem jest przydatne czasowe wyłączenie wszystkich wyzwalaczy.
+Dla przykładu: możesz chcieć edytować profil aktywowany ręcznie,  albo plik normalnej konfiguracji, bez wpływu na to profili aktywowanych przez wyzwalacze.
+Możesz to osiągnąć przez oznaczenie pola wyboru Tymczasowo wyłącz wszystkie wyzwalacze w oknie dialogowym profili konfiguracji.
+
+++ Lokalizacja plików konfiguracyjnych ++
+Wszystkie ustawienia wersji przenośnej NVDA, katalog appModules oraz niestandardowe sterowniki znajdują się w katalogu o nazwie userConfig w katalogu głównym NVDA.
+
+Instalacyjna wersja NVDA przechowuje wszystkie ustawienia, takie jak appModules oraz niestandardowe sterowniki w specjalnym katalogu NVDA w profilu użytkownika systemu Windows.
+Oznacza to, że każdy użytkownik w systemie może mieć własne ustawienia NVDA.
+Aby dostać się do katalogu z ustawieniami wersji instalacyjnej NVDA, przejdź w menu start do programy -> NVDA -> Eksploruj katalog konfiguracyjny użytkownika.
+
+Ustawienia NVDA stosowane na ekranie logowania i ekranie kontroli konta użytkownika, są przechowywane w katalogu systemConfig w katalogu instalacyjnym NVDA.
+Zwykle folder ten nie powinien być ręcznie modyfikowany.
+Aby zmienić konfigurację NVDA na ekranie logowania, ustaw najpierw żądaną konfigurację w NVDA po zalogowaniu do systemu, zapisz ją, a następnie kliknij przycisk "Używaj zapisanych ustawień na ekranie NVDA" w oknie dialogowym "Ustawienia ogólne" (NVDA+Control+G).
+
++ Dodatkowe Narzędzia +
+
+++ Podgląd Logu ++
+Podgląd logów znajduje się w menu Narzędzia, i umożliwia przeglądanie zapisu wszystkich wewnętrznych zdarzeń programu, które wystąpiły od ostatniego uruchomienia NVDA.
+
+Oprócz czytania treści, można także zapisać kopię pliku dziennika lub odświeżyć podgląd, żeby pokazać najbardziej aktualne informacje.
+Polecenia te są dostępne w menu Log.
+
+++ Podgląd Mowy ++
+Dla widzących twórców oprogramowania, albo osób demonstrujących działanie NVDA szerszej publiczności osób widzących, dostępne jest ruchome okno wyświetlające to, co NVDA aktualnie wypowiada.
+
+Aby włączyć podgląd mowy, zaznacz pozycję "Podgląd Mowy" w menu w menu Narzędzia. 
+Aby wyłączyć tą opcję usuń zaznaczenie "Podgląd Mowy" w menu .
+
+Gdy podgląd mowy jest włączony, jego okienko stale się odświeża by pokazać aktualnie wypowiadany tekst.
+Gdy klikniesz lub umieścisz punkt uwagi wewnątrz podglądu, NVDA tymczasowo zatrzyma aktualizację tekstu, dzięki czemu możesz łatwo zaznaczyć lub skopiować istniejące treści.
+
+Aby przełączać podgląd mowy z każdego miejsca, zdefiniuj własne zdarzenie wejścia używając [okna Zdarzenia wejścia #InputGestures].
+
+++ Manager wtyczek ++
+Manager wtyczek, dostępny poprzez polecenie "Zarządzaj dodatkami" w menu NVDA: Narzędzia, pozwala na instalację i usuwanie dodatków NVDA.
+Dodatki to pakiety przygotowywane przez społeczność, zawierające oprogramowanie, które może dodawać lub zmieniać funkcje NVDA, czy nawet dostarczać wsparcie dodatkowych monitorów brajlowskich lub syntezatorów mowy.
+
+Okienko managera dodatków zawiera listę wszystkich dodatków aktualnie zainstalowanych w twojej konfiguracji NVDA. 
+Wyświetlana jest nazwa pakietu, wersja i autor, a dalsze informacje, takie jak opis i adres strony internetowej mogą zostać wyświetlone po zaznaczeniu dodatku i kliknięciu przycisku "O dodatku" .
+Jeśli wybrany dodatek posiada pomoc, możesz ją przejrzeć po wciśnięciu przycisku Pomoc dodatku.
+
+Aby przejrzeć i pobrać dostępne dodatki, naciśnij przycisk "Pobierz dodatki".
+Ten przycisk otwiera [stronę dodatków NVDA http://addons.nvda-project.org/].
+Jeśli NVDA jest zainstalowany i uruchomiony w systemie, możesz otworzyć dodatek bezpośrednio w przeglądarce internetowej, aby rozpocząć opisany poniżej proces instalacji.
+W przeciwnym wypadku, zapisz plik pakietu dodatku i postępuj według poniższych instrukcji.
+
+Aby zainstalować pozyskany plik dodatku, naciśnij przycisk "Zainstaluj".
+Pozwoli to wskazać pakiet dodatku (plik z rozszerzeniem .nvda-addon) znajdujący się na komputerze lub w sieci lokalnej.
+Gdy naciśniesz przycisk "Otwórz", rozpocznie się proces instalacji.
+
+Na początku procesu instalacji, NVDA poprosi o potwierdzenie, czy rzeczywiście chcesz zainstalować ten dodatek.
+Ponieważ funkcjonalność dodatku nie jest w żaden sposób ograniczana wewnątrz NVDA, co teoretycznie może umożliwiać dostęp do twoich osobistych danych lub nawet całego systemu (jeśli używana kopia NVDA jest zainstalowana w systemie), jest bardzo ważne, aby instalować dodatki pochodzące wyłącznie z zaufanych źródeł.
+Gdy dodatek zostanie zainstalowany, NVDA musi zostać uruchomiony ponownie, aby dodatek mógł zacząć działać. 
+Do tego czasu dodatek na liście managera będzie miał status "instalacja".
+
+Aby usunąć dodatek, zaznacz go na liście i naciśnij przycisk "Usuń".
+NVDA zapyta, czy na pewno chcesz to zrobić..
+Tak jak w przypadku instalacji, NVDA musi zostać ponownie uruchomiony aby dodatek został całkowicie usunięty.
+Do tego czasu, na liście managera dodatków usuwany dodatek będzie miał status "usunięty".
+
+Okno managera dodatków zawiera również przycisk "Zamknij".
+Jeśli zainstalowałeś lub usunąłeś jakieś dodatki, NVDA zapyta, czy chcesz zrestartować program, aby wprowadzone zmiany mogły zostać wprowadzone.
+
+W przeszłości możliwe było rozszerzanie funkcjonalności NVDA poprzez  kopiowanie pojedynczych wtyczek i sterowników do folderu konfiguracji użytkownika.
+O ile obecna wersja NVDA może wciąż uruchamiać takie wtyczki, nie będą się one pojawiać na liście Managera dodatków.
+Najlepiej byłoby usunąć takie pliki z folderu konfiguracji i zainstalować odpowiedni pakiet dodatku, jeśli jest dostępny.
+
+Aby uruchamiać manager dodatków z każdego miejsca, określ własne zdarzenie wejścia używając [okna zdarzenia wejścia #InputGestures].
+
+++ Konsola Pythona ++
+Konsola Pythona NVDA znajduje się w menu Narzędzia  w NVDA. Jest narzędziem dla programistów i jest używana do debugowania, przeglądania wewnątrz NVDA lub sprawdzania hierarchii dostępności aplikacji.
+Więcej informacji znajduje się w podręczniku dla twórców dostępnego w [sekcji Development na stronie NVDA http://community.nvda-project.org/wiki/Development].
+
+++ przeładuj wtyczki ++
+Po aktywacji tego polecenia wszystkie moduły aplikacji oraz wtyczki zostaną przeładowane bez potrzeby restartu nvda. Jest to użyteczne dla programistów.
+
++ Obsługiwane Syntezatory Mowy +[SupportedSpeechSynths]
+Ten rozdział zawiera informacje na temat syntezatorów mowy wspieranych przez NVDA.
+Dla jeszcze bardziej rozszerzonej listy darmowych i komercyjnych syntezatorów, które możesz pobrać i zakupić do użytkowania z NVDA, proszę zajrzeć na stronę [http://www.nvda-project.org/wiki/ExtraVoices http://www.nvda-project.org/wiki/ExtraVoices].
+
+++ eSpeak ++
+[eSpeak http://espeak.sourceforge.net/] jest to syntezator wbudowany bezpośrednio w NVDA i nie wymaga specjalnych sterowników lub innych komponentów, które muszą być zainstalowane. 
+NVDA uruchamiając się  używa domyślnie eSpeak.
+Jako że syntezator ten jest wbudowany w NVDA, jest to doskonały wybór przy uruchamianiu NVDA z napędu USB na innych systemach.
+
+Każdy głos pochodzący z eSpeaka mówi innym językiem. 
+Ponad 43 różne języki są  obsługiwane przez eSpeak.
+
+Istnieje również wiele wariantów, które mogą być wybrane do zmiany brzmienia głosu.
+
+++ Microsoft Speech API version 4 (SAPI 4) ++
+SAPI 4 to starszy standard oprogramowania Microsoftu dla syntezatorów mowy.
+Wiele syntezatorów mowy, które są zgodne z tym standardem można nabyć z różnych firm lub pobrać ze stron internetowych.
+Podczas korzystania przez NVDA z tych syntezatorów, można zmieniać głosy w oknie dialogowym [Ustawienia Głosu #VoiceSettings] lub poprzez [Szybką zmianę ustawień syntezatora #SynthSettingsRing]. Dostępne są wszystkie głosy ze wszystkich zainstalowanych silników SAPI4 znalezionych w systemie.
+
+Jeśli masz zainstalowane głosy syntezatora SAPI4, ale nie pojawiają się one na liście syntezatorów w NVDA, należy zainstalować binaria runtime SAPI 4.0, dostępne na stronie http://activex.microsoft.com/activex/controls/sapi/spchapi.exe.
+
+++ Microsoft Speech API version 5 (SAPI 5) ++
+SAPI 5 to standard Microsoftu dla oprogramowania syntezatorów mowy.
+Wiele syntezatorów mowy, które są zgodne z tym standardem można nabyć z różnych firm lub pobrać ze stron internetowych. W twoim systemie jest już prawdopodobnie zainstalowany co najmniej jeden głos SAPI5.
+Podczas korzystania przez NVDA z tego syntezatora, dostępne głosy w oknie dialogowym [Ustawienia Głosu #VoiceSettings] lub poprzez [Szybką zmianę ustawień syntezatora #SynthSettingsRing] zawierają wszystkie głosy ze wszystkich zainstalowanych silników SAPI5 znalezionych w systemie.
+
+++ Microsoft Speech Platform ++
+Ten standard dostarcza głosów dla wielu języków, zwykle używanych  w rozwoju aplikacji korzystających z architektury serwerowej. 
+Głosy te mogą także zostać użyte z NVDA.
+
+Aby użyć tych głosów, musisz zainstalować dwa komponenty:
+- Microsoft Speech Platform - Runtime (Wersja 11) , x86: http://www.microsoft.com/download/en/details.aspx?id=27225
+- Microsoft Speech Platform - Runtime Languages (Wersja 11): http://www.microsoft.com/download/en/details.aspx?id=27224
+ - Ta strona zawiera wiele plików dla rozpoznawania mowy i zamiany tekstu na mowę.
+ Wybierz pliki TTS (Text-to-speech - tekst na mowę) zawierające dane dla potrzebnych języków i głosów.
+ Dla przykładu, plik  MSSpeech_TTS_en-US_ZiraPro.msi jest to głos w języku Angielski (stany zjednoczone).
+ -
+-
+
+++ Audiologic Tts3 ++
+Jest to komercyjny syntezator mowy dla języka włoskiego.
+Należy mieć zainstalowany ten syntezator w systemie, aby używać go z NVDA.
+Aby uzyskać więcej informacji, odwiedź stronę Audiologic: www.audiologic.it.
+
+Ten syntezator nie obsługuje [Wykrywania wymowy #VoiceSpellingFunctionality].
+
+++ Nuance Vocalizer dla NVDA ++
+Nuance Vocalizer jest to komercyjny, wysokiej jakości syntezator mowy rozwijany przez firmę Nuance Communications, Inc. i przygotowany dla NVDA przez Tiflotecnia, Lda.
+Zawiera ponad 50 różnych głosów, które możesz zainstalować, mówiących ponad 30 językami.
+Wszystkie komponenty syntezatora i głosy są umieszczone w pakietach dodatków, co pozwala używać ich w przenośnych kopiach NVDA.
+
+Możesz uzyskać więcej informacji o Nuance Vocalizer dla NVDA i dowiedzieć się jak je nabyć na stronie [www.vocalizer-nvda.com http://www.vocalizer-nvda.com/].
+Procent ze sprzedaży tego produktu jest przekazywany dla NV Access jako dotacja na dalszy rozwój NVDA.
+
++ Obsługiwane Monitory Brajlowskie +[SupportedBrailleDisplays]
+Ten rozdział zawiera informacje na temat monitorów brajlowskich wspieranych przez NVDA.
+
+++ Freedom Scientific Focus/PAC Mate Series ++
+Wszystkie monitory Focus i PAC Mate firmy [Freedom Scientific http://www.freedomscientific.com/] są obsługiwane w trybie połączeń USB i Bluetooth.
+Niezbędne są sterowniki brajlowskie Freedom Scientific zainstalowane w systemie.
+Jeśli nie zostały one jeszcze zainstalowane, to należy je pobrać ze strony: http://www2.freedomscientific.com/downloads/focus-40-blue/focus-40-14-blue-downloads.asp.
+Na podanej stronie wymieniony jest tylko sterownik monitora Focus Blue, ale obsługuje on wszystkie monitory Freedom Scientific i Pacmate.
+Jeśli używasz 64-bitowego Windowsa i sterowniki zostały zainstalowane przez inny program czytający ekran, prawdopodobnie i tak będziesz musiał zainstalować sterowniki z tego linku, ponieważ pliki wymagane przez NVDA nie zostały prawdopodobnie zainstalowane przez inny program czytający ekran.
+
+Domyślnie NVDA może wykryć i podłączyć się do tych monitorów przez USB lub bluetooth.
+Konfigurując monitor, możesz wymusić połączenie "USB" or "Bluetooth" aby ograniczyć używany typ połączenia.
+Może to być przydatne, jeśli chcesz połączyć się z monitorem Focus przez bluetooth, ale móc jednocześnie ładować urządzenie z komputera przez port USB.
+
+Poniżej znajdują się klawisze skrótów NVDA dla tego monitora.
+Zajrzyj do dokumentacji monitora, aby dowiedzieć się gdzie znajdują się opisywane klawisze.
+%kc:beginInclude
+|| Działanie | Klawisz skrótu |
+| Przewiń wyświetlacz brajla wstecz | topRouting1 (pierwsza komórka na wyświetlaczu) |
+| Przewiń wyświetlacz brajla w przód | topRouting20/40/80 (ostatnia komórka na wyświetlaczu) |
+| Przewiń wyświetlacz brajla wstecz | leftAdvanceBar |
+| Przewiń wyświetlacz brajla w przód | rightAdvanceBar |
+| Przełącz "Brajl związany z..." | leftGDFButton+rightGDFButton |
+| Przełącz działanie lewego pokrętła | leftWizWheelPress |
+| Przejdź wstecz używając akcji lewego pokrętła | leftWizWheelUp |
+| Przejdź w przód używając akcji lewego pokrętła | leftWizWheelDown |
+| Przełącz akcję prawego pokrętła | rightWizWheelPress |
+| Przejdź wstecz używając akcji prawego pokrętła | rightWizWheelUp |
+| Przejdź w przód używając akcji prawego pokrętła | rightWizWheelDown |
+| Przywołaj do komórki brajla | routing |
+| Klawisz backspace | punkt 7 |
+| Klawisz enter | punkt 8 |
+| Klawisz shift+tab | brajlowska spacja+punkt 1+punkt 2 |
+| Klawisz tab | brajlowska spacja+punkt 4+punkt 5 |
+| Klawisz strzałki w górę | brajlowska spacja+punkt 1 |
+| Klawisz strzałki w dół | brajlowska spacja+punkt 4 |
+| Klawisz control+strzałka w lewo | brajlowska spacja+punkt 2 |
+| Klawisz control+strzałka w prawo | brajlowska spacja+punkt 5 |
+| klawisz strzałka w lewo | brajlowska spacja+punkt 3 |
+| klawisz strzałka w prawo | brajlowska spacja+punkt 6 |
+| Klawisz home | brajlowska spacja+punkt 1+punkt 3 |
+| Klawisz end | brajlowska spacja+punkt 4+punkt 6 |
+| Klawisz control+home | brajlowska spacja+punkt 1+punkt 2+punkt 3 |
+| Klawisz control+end | brajlowska spacja+punkt 4+punkt 5+punkt 6 |
+| Klawisz alt | brajlowska spacja+punkt 1+punkt 3+punkt 4 |
+| Klawisz alt+tab | brajlowska spacja+punkt 2+punkt 3+punkt 4+punkt 5 |
+| Klawisz escape | brajlowska spacja+punkt 1+punkt 5 |
+| Klawisz windows | brajlowska spacja+punkt 2+punkt 4+punkt 5+punkt 6 |
+| Klawisz spacja | brajlowska spacja |
+| Klawisz windows+d (minimalizuje wszystkie okna) | brajlowska spacja+punkt 1+punkt 2+punkt 3+punkt 4+punkt 5+punkt 6 |
+| Odczytaj bieżącą linię | brajlowska spacja+punkt 1+punkt 4 |
+| Menu NVDA | brajlowska spacja+punkt 1+punkt 3+punkt 4+punkt 5 |
+
+Dla nowszych modeli Focus posiadających klawisze rocker bar (focus 40, focus 80 i focus blue):
+|| Działanie | Klawisz skrótu |
+| Przenieś wyświetlacz do poprzedniej linii | leftRockerBarUp, rightRockerBarUp |
+| Przenieś wyświetlacz do następnej linii | leftRockerBarDown, rightRockerBarDown |
+
+Tylko dla Focus 80:
+|| Działanie | Klawisz skrótu |
+| Przewiń wyświetlacz wstecz | leftBumperBarUp, rightBumperBarUp |
+| Przewiń wyświetlacz na przód | leftBumperBarDown, rightBumperBarDown |
+%kc:endInclude
+
+++ Optelec ALVA BC640/680 ++
+Zarówno model ALVA BC640 i BC680 firmy [Optelec http://www.optelec.com/] są obsługiwane przy połączeniu przez USB i bluetooth.
+Nie wymagają instalacji żadnych sterowników dla prawidłowego działania.
+Wystarczy podłączyć monitor i skonfigurować NVDA aby z niego korzystał.
+
+Monitory te posiadają klawiaturę brajlowską, ale same wykonują proces zamiany brajla na tekst.
+Ustawienia tabeli wprowadzania brajla w NVDA nie mają w związku z tym zastosowania.
+
+Poniżej klawisze monitora, których możesz używać z nvda. 
+Aby je odnaleźć, zajrzyj do dokumentacji urządzenia:
+%kc:beginInclude
+|| Działanie | Klawisz skrótu |
+| przewiń brajl do tyłu | t1 |
+| przenieś monitor do poprzedniej linii | t2
+| przenieś monitor do następnej linii | t4 |
+| Przewiń brajl do przodu | t5 |
+| Przywołaj do komórki brajla | routing |
+| Klawisz shift+tab | sp1 |
+| Klawisz alt | sp2 |
+| Klawisz escape | sp3 |
+| Klawisz tab | sp4 |
+| Klawisz strzałka w górę | spUp |
+| Klawisz strzałka w dół | spDown |
+| Klawisz strzałka w lewo | spLeft |
+| Klawisz strzałka w prawo | spRight |
+| Klawisz enter | spEnter |
+| Menu NVDA | sp1+sp3 |
+| klawisz windows + d (minimalizuje wszystkie okna) | sp1+sp4 |
+| Klawisz windows | sp2+sp3 |
+| Klawisz alt+tab | sp2+sp4 |
+%kc:endInclude
+
+++ Monitory Handy Tech ++
+NVDA obsługuje wszystkie monitory firmy [Handy Tech http://www.handytech.de/] podłączone przez USB lub bluetooth.
+W przypadku starszych monitorów USB, należy zainstalować sterowniki USB dla Handy Tech w systemie.
+
+Wprowadzanie brajlem nie jest jeszcze obsługiwane.
+
+Poniżej skróty klawiszowe dla tego monitora, które działają w nvda.
+Aby odnaleźć opisywane klawisze, zajrzyj do dokumentacji urządzenia:
+%kc:beginInclude
+|| Działanie | Klawisz skrótu |
+| przewiń brajla do tyłu | left, up |
+| przewiń brajla do przodu | right, down |
+| przenieś monitor do poprzedniej linii | b4 |
+| przenieś monitor do następnej linii | b5 |
+| przywołaj do komórki brajla | routing |
+| klawisz shift + tab | esc |
+| klawisz alt | b2+b4+b5 |
+| klawisz escape | b4+b6 |
+| klawisz tab | enter |
+| klawisz enter | esc+enter |
+| strzałka w górę | left space |
+| strzałka w dół | right space |
+| menu nvda | b2+b4+b5+b6 |
+| konfiguracja handy tech | b4 +b8 |
+%kc:endInclude
+
+++ MDV Lilli ++
+Monitor Lilli Braille firmy [MDV http://www.mdvbologna.it/] jest obsługiwany przez NVDA.
+ Nie wymaga instalacji żadnych specjalnych sterowników.
+Wystarczy podłączyć monitor i skonfigurować NVDA aby go używał.
+
+Poniżej skróty klawiszowe dla tego monitora, które działają w nvda.
+Aby odnaleźć opisywane klawisze, zajrzyj do dokumentacji urządzenia:
+%kc:beginInclude
+|| Działanie | Klawisz skrótu |
+| Przewiń wyświetlacz brajla wstecz | LF |
+| Przewiń wyświetlacz brajla w przód | RG |
+| Przenieś wyświetlacz brajla do poprzedniej linii | UP |
+| Przenieś wyświetlacz brajla do następnej linii | DN |
+| Przywołaj do komórki brajla | route |
+| Klawisz shift+tab | SLF |
+| Klawisz tab | SRG |
+| Klawisz alt+tab | SDN |
+| Klawisz alt+shift+tab | SUP |
+%kc:endInclude
+
+++ Monitory brajlowskie Baum/Humanware/APH ++
+Kilka monitorów firm [Baum http://www.baum.de/cms/en/], [HumanWare http://www.humanware.com/] i [APH http://www.aph.org/] jest obsługiwanych przez USB i bluetooth.
+Wśród nich:
+- Baum: SuperVario, PocketVario, VarioUltra (tylko Bluetooth), Pronto! (tylko Bluetooth)
+- HumanWare: Brailliant, BrailleConnect
+- APH: Refreshabraille
+-
+Niektóre inne monitory produkowane przez Baum mogą również działać, ale nie zostało to przetestowane.
+
+Aby podłączyć monitor przez USB, musisz najpierw zainstalować sterowniki USB dostarczane przez producenta.
+Dla APH Refreshabraille, tryb USB musi być ustawiony na tryb szeregowy (serial).
+
+Poniżej skróty klawiszowe dla tego monitora, które działają w nvda.
+Aby odnaleźć opisywane klawisze, zajrzyj do dokumentacji urządzenia:
+%kc:beginInclude
+|| Działanie | Klawisz skrótu |
+| Przewiń wyświetlacz brajla wstecz | d2 |
+| Przewiń wyświetlacz brajla w przód | d5 |
+| Przenieś wyświetlacz brajla do poprzedniej linii | d1 |
+| Przenieś wyświetlacz brajla do następnej linii | d3 |
+| Przywołaj do komórki brajla | routing |
+
+Dla monitorów z joystickiem:
+|| Działanie | Klawisz skrótu |
+| Klawisz strzałka w górę | up |
+| Klawisz strzałka w dół | down |
+| Klawisz strzałka w lewo | left |
+| Klawisz strzałka w prawo | right |
+| Klawisz enter | select |
+%kc:endInclude
+
+++ hedo ProfiLine USB ++
+Hedo ProfiLine USB produkcji [hedo Reha-Technik http://www.hedo.de/] jest obsługiwany.
+Musisz najpierw zainstalować sterowniki USB dostarczane przez producenta.
+
+Poniżej skróty klawiszowe dla tego monitora, które działają w nvda.
+Aby odnaleźć opisywane klawisze, zajrzyj do dokumentacji urządzenia:
+%kc:beginInclude
+|| Działanie | Klawisz skrótu |
+| Przewiń wyświetlacz brajla wstecz | K1 |
+| Przewiń wyświetlacz brajla w przód | K3 |
+| Przenieś wyświetlacz brajla do poprzedniej linii | B2 |
+| Przenieś wyświetlacz brajla do następnej linii | B5 |
+| Przywołaj do komórki brajla | routing |
+| Przełącz "Brajl związany z..." | K2 |
+| Czytaj wszystko | B6 |
+%kc:endInclude
+
+++ hedo MobilLine USB ++
+Hedo MobilLine USB produkcji [hedo Reha-Technik http://www.hedo.de/] jest obsługiwany.
+Musisz najpierw zainstalować sterownik USB dostarczany przez producenta.
+
+Poniżej skróty klawiszowe dla tego monitora, które działają w nvda.
+Aby odnaleźć opisywane klawisze, zajrzyj do dokumentacji urządzenia:
+%kc:beginInclude
+|| Działanie | Klawisz skrótu |
+| Przewiń wyświetlacz brajla wstecz | K1 |
+| Przewiń wyświetlacz brajla w przód | K3 |
+| Przenieś wyświetlacz brajla do poprzedniej linii | B2 |
+| Przenieś wyświetlacz brajla do następnej linii | B5 |
+| Przywołaj do komórki brajla | routing |
+| Przełącz "Brajl związany z..." | K2 |
+| Czytaj wszystko | B6 |
+%kc:endInclude
+
+++ HumanWare Brailliant BI/B Series ++
+Serie monitorów Brailliant BI i B produkcji [HumanWare http://www.humanware.com/], włącznie z BI 32, BI 40 and B 80, są obsługiwane przy połączeniu przez USB i bluetooth.
+Dla połączenia przez USB, musisz najpierw zainstalować sterowniki USB dostarczane przez producenta.
+
+Poniżej skróty klawiszowe dla tego monitora, które działają w nvda.
+Aby odnaleźć opisywane klawisze, zajrzyj do dokumentacji urządzenia:
+%kc:beginInclude
+|| Działanie | Klawisz skrótu |
+| Przewiń wyświetlacz brajla wstecz | left |
+| Przewiń wyświetlacz brajla w przód | right |
+| Przenieś wyświetlacz brajla do poprzedniej linii | up |
+| Przenieś wyświetlacz brajla do następnej linii | down |
+| Przywołaj do komórki brajla | routing |
+| Przełącz "Brajl związany z..." | up+down |
+| Klawisz strzałka w górę | spacja+punkt 1 |
+| Klawisz strzałka w dół | spacja+punkt 4 |
+| Klawisz strzałka w lewo | spacja+punkt 3 |
+| Klawisz strzałka w prawo | spacja+punkt 6 |
+| NVDA Menu | c1+c3+c4+c5 (komenda n) |
+| Klawisz shift+tab | spacja+punkt 1+punkt 3 |
+| Klawisz tab | spacja+punkt 4+punkt 6 |
+| Klawisz alt | spacja+punkt 1+punkt 3+punkt 4 (spacja+m) |
+| Klawisz escape | spacja+punkt 1+punkt 5 (spacja+e) |
+| Klawisz enter | punkt 8 |
+| Klawisz windows+d (minimalizuje wszystkie okna) | c1+c4+c5 (komenda d) |
+| Klawisz windows | spacja+punkt 3+punkt 4 |
+| Klawisz alt+tab | spacja+punkt 2+punkt 3+punkt 4+punkt 5 (spacja+t) |
+| Czytaj wszystko | c1+c2+c3+c4+c5+c6 |
+%kc:endInclude
+
+++ HIMS Braille Sense/Braille EDGE Series ++
+NVDA obsługuje monitory Braille Sense i Braille EDGE produkcji [Hims http://www.hims-inc.com/] przy połączeniu przez USB i bluetooth. 
+Aby korzystać z połączenia USB, musisz zainstalować sterowniki USB HIMS w swoim systemie.
+Możesz je pobrać z Centrum zasobów HIMS: http://www.hims-inc.com/resource-center/
+Na tej stronie, wybierz swoje urządzenie i pobierz sterownik z sekcji Window-eyes.
+Strona wymienia tylko Window-eyes, jest to jednak sterownik USB ogólnego przeznaczenia i będzie pracował również z NVDA.
+
+Poniżej skróty klawiszowe dla tych monitorów, które działają w nvda.
+Aby odnaleźć opisywane klawisze, zajrzyj do dokumentacji urządzenia:
+%kc:beginInclude
+|| Działanie | Klawisz skrótu |
+| Przewiń wyświetlacz brajla wstecz | lewy klawisz przewijania w dół |
+| Przewiń wyświetlacz brajla w przód | prawy klawisz przewijania w dół |
+| Przenieś wyświetlacz brajla do poprzedniej linii | lewy klawisz przewijania w górę |
+| Przenieś wyświetlacz brajla do następnej linii | prawy klawisz przewijania w górę |
+| Przywołaj do komórki brajla | routing |
+| Klawisz shift+tab | punkt 1+punkt 2+spacja |
+| Klawisz alt | punkt 1+punkt 3+punkt 4+spacja |
+| Klawisz escape | punkt 1+punkt 5+spacja |
+| Klawisz tab | punkt 4+punkt 5+spacja |
+| Klawisz enter | punkt 8 |
+| Klawisz backspace | punkt 7 |
+| Klawisz strzałka w górę | punkt 1+spacja |
+| Klawisz strzałka w dół | punkt 4+spacja |
+| capsLock | punkt 1+punkt 3+punkt 6+spacja |
+| Klawisz shift+alt+tab | advance2+advance3+advance1 |
+| Klawisz alt+tab | advance2+advance3 |
+| Klawisz end | punkt 4+punkt 6+spacja |
+| Klawisz Control+end | punkt 4+punkt 5+punkt 6+spacja |
+| Klawisz home | punkt 1+punkt 3+spacja |
+| Klawisz control+home | punkt 1+punkt 2+punkt 3+spacja |
+| Klawisz strzałka w lewo | punkt 3+spacja |
+| Klawisz control+shift+strzałka w lewo | punkt 2+punkt 8+spacja+advance1 |
+| Klawisz control+strzałka w lewo | punkt 2+spacja |
+| Klawisz shift+alt+strzałka w lewo | punkt 2+punkt 7+advance1 |
+| Klawisz alt+strzałka w lewo | punkt 2+punkt 7 |
+| Klawisz strzałka w prawo | punkt 6+spacja |
+| Klawisz control+shift+strzałka w prawo | punkt 5+punkt 8+spacja+advance1 |
+| Klawisz control+strzałka w prawo | punkt 5+spacja |
+| klawisz shift+alt+strzałka w prawo | punkt 5+punkt 7+advance1 |
+| Klawisz alt+strzałka w prawo | punkt 5+punkt 7 |
+| Klawisz pageUp | punkt 1+punkt 2+punkt 6+spacja |
+| Klawisz control+pageUp | punkt 1+punkt 2+punkt 6+punkt 8+spacja |
+| Klawisz control+shift+strzałka w górę | punkt 2+punkt 3+punkt 8+spacja+advance1 |
+| Klawisz control+strzałka w górę | punkt 2+punkt 3+spacja |
+| Klawisz shift+alt+strzałka w górę | punkt 2+punkt 3+punkt 7+advance1 |
+| Klawisz alt+strzałka w górę | punkt 2+punkt 3+punkt 7 |
+| Klawisz shift+strzałka w górę | lewy klawisz przewijania w dół + spacja |
+| Klawisz pageDown | punkt 3+punkt 4+punkt 5+spacja |
+| Klawisz control+pagedown | punkt 3+punkt 4+punkt 5+punkt 8+spacja |
+| Klawisz control+shift+strzałka w dół | punkt 5+punkt 6+punkt 8+spacja+advance1 |
+| Klawisz control+strzałka w dół | punkt 5+punkt 6+spacja |
+| Klawisz shift+alt+strzałka w dół | punkt 5+punkt 6+punkt 7+advance1 |
+| Klawisz alt+strzałka w dół | punkt 5+punkt 6+punkt 7 |
+| Klawisz shift+strzałka w dół | prawy klawisz przewijania w dół + spacja |
+| Klawisz delete | punkt 1+punkt 3+punkt 5+spacja |
+| Klawisz f1 | punkt 1+punkt 2+punkt 5+spacja |
+| Klawisz f3 | punkt 1+punkt 2+punkt 4+punkt 8 |
+| Klawisz f4 | punkt 7+advance3 |
+| Klawisz windows+b | punkt 1+punkt 2+advance1 |
+| Klawisz windows+d | punkt 1+punkt 4+punkt 5+advance1 |
+%kc:endInclude
+
+++ HIMS SyncBraille ++
+NVDA obsługuje monitor SyncBraille produkcji [HIMS http://www.hims-inc.com/].
+Musisz najpierw zainstalować sterowniki USB HIMS w swoim systemie.
+
+Poniżej skróty klawiszowe dla tego monitora, które działają w nvda.
+Aby odnaleźć opisywane klawisze, zajrzyj do dokumentacji urządzenia:
+%kc:beginInclude
+|| Działanie | Klawisz skrótu |
+| Przewiń wyświetlacz brajla wstecz | lewy klawisz przewijania w dół |
+| Przewiń wyświetlacz brajla w przód | prawy klawisz przewijania w dół |
+| Przywołaj do komórki brajla | routing |
+%kc:endInclude
+
+++ Monitory brajlowskie Seika ++
+NVDA obsługuje monitory Seika wersja 3, 4 i 5 (40 znaków) oraz Seika80 (80 znaków) produkcji [Nippon Telesoft http://www.nippontelesoft.com/].
+Możesz uzyskać więcej informacji o tych monitorach na stronie http://www.seika-braille.com/.
+Musisz najpierw zainstalować sterowniki USB dostarczane przez producenta.
+
+Poniżej skróty klawiszowe dla tego monitora, które działają w nvda.
+Aby odnaleźć opisywane klawisze, zajrzyj do dokumentacji urządzenia:
+%kc:beginInclude
+|| Działanie | Klawisz skrótu |
+| Przewiń wyświetlacz brajla wstecz | left |
+| Przewiń wyświetlacz brajla w przód | right |
+| Przenieś wyświetlacz brajla do poprzedniej linii | b3 |
+| Przenieś wyświetlacz brajla do następnej linii | b4 |
+| Przełącz "Brajl związany z..." | b5 |
+| Czytaj wszystko | b6 |
+| tab | b1 |
+| shift+tab | b2 |
+| alt+tab | b1+b2 |
+| Menu NVDA | left+right |
+| Przywołaj do komórki brajla | routing |
+%kc:endInclude
+
+++ Nowsze modele Papenmeier BRAILLEX ++
+Obsługiwane są następujące monitory: 
+- BRAILLEX EL 40c, EL 80c, EL 20c, EL 60c (USB)
+- BRAILLEX EL 40s, EL 80s, EL 2d80s, EL 70s, EL 66s (USB)
+- BRAILLEX Trio (USB i bluetooth)
+- BRAILLEX Live 20, BRAILLEX Live i BRAILLEX Live Plus (USB i bluetooth)
+-
+
+Jeśli zainstalowany jest BrxCom, NVDA będzie używać BrxCom.
+BrxCom jest to narzędzie, które pozwala używać wprowadzania z klawiatury brajlowskiej niezależnie od używanego programu odczytu ekranu.
+Nowa wersja BrxCom pracująca z NVDA, wkrótce  zostanie wydana przez Papenmeier.  
+Wprowadzanie z klawiatury jest możliwe na modelach Trio i BRAILLEX Live.
+
+Większość urządzeń posiada pasek łatwego dostępu(EAB) umożliwiający intuicyjną i szybką obsługę.
+EAB może być przesunięty w czterech kierunkach, a każdy kierunek generalnie posiada dwa przełączniki.
+Serie c i Live to jedyny wyjątek od tej reguły.
+
+Seria c i niektóre inne monitory posiada dwie linie routingu, z których górna jest używana do ogłaszania formatowania.
+Naciśnięcie i przytrzymanie jednego z górnych klawiszy routingowych i naciśnięcie EAB na monitorach serii c emuluje drugi stan przełącznika.
+Monitory serii live  posiadają jeden rząd klawiszy routingowych, a EAB - jeden stopień w każdym kierunku.
+Drugi stopień może zostać uzyskany poprzez naciśnięcie jednego z klawiszy routingowych i przesunięcie EAB w wybranym kierunku.
+Naciśnięcie i przytrzymanie klawisza góra, dół, prawo i lewo (albo EAB) spowoduje powtórzenie powiązanej akcji.
+
+Na ogół, następujące klawisze są dostępne na tych monitorach:
+|| Nazwa | Klawisz skrótu |
+| l1 | lewy przedni klawisz |
+| l2 | lewy tylny klawisz |
+| r1 | prawy przedni klawisz |
+| r2 | prawy tylny klawisz |
+| up | 1 stopień w górę |
+| up2 | dwa stopnie w górę |
+| left | 1 stopień w lewo |
+| left2 | 2 stopnie w lewo |
+| right | 1 stopień w prawo |
+| right2 | 2 stopnie w prawo |
+| dn | 1 stopień w dół |
+| dn2 | 2 stopnie w dół |
+
+Poniżej znajdują się komendy Papenmeier dla NVDA:
+%kc:beginInclude
+|| Działanie | Klawisz skrótu |
+| Przewiń wyświetlacz brajla wstecz | left |
+| Przewiń wyświetlacz brajla w przód | right |
+| Przenieś wyświetlacz brajla do poprzedniej linii | up |
+| Przenieś wyświetlacz brajla do następnej linii | dn |
+| Przywołaj do komórki brajla | routing |
+| Raportuj aktualny znak w punkcie przeglądu | l1 |
+| Aktywuj aktualny obiekt nawigatora | l2 |
+| Przełącz brajl związany z | r2 |
+| Raportuj tytuł | l1+up |
+| Raportuj pasek stanu | l2+down |
+| Przejdź do obiektu nadrzędnego | up2 |
+| Przejdź do pierwszego obiektu podrzędnego | dn2 |
+| Przejdź do poprzedniego obiektu | left2 |
+| Przejdź do następnego obiektu | right2 |
+| Raportuj formatowanie tekstu | górny rząd klawiszy routingowych |
+%kc:endInclude
+
+Model Trio posiada 4 dodatkowe klawisze, znajdujące się z przodu klawiatury brajlowskiej.
+Są to (w kolejności od lewej do prawej):
+- Klawisz lewego kciuka (lt)
+- spacja
+- spacja
+- Klawisz prawego kciuka (rt)
+-
+Aktualnie klawisz prawego kciuka nie jest używany.
+Obydwa wewnętrzne klawisze to spacja.
+
+|| Działanie | Klawisz skrótu |
+%kc:beginInclude
+| Klawisz backspace | punkt 7 |
+| Klawisz enter | punkt 8 |
+| Klawisz escape | spacja+punkt 7 |
+| Klawisz strzałka w górę | spacja+punkt 2 |
+| Klawisz strzałka w lewo | spacja+punkt 1 |
+| Klawisz strzałka w prawo | spacja+punkt 4 |
+| strzałka w dół | spacja+punkt 5 |
+| Klawisz control | lt+punkt 2 |
+| Klawisz alt | lt+punkt 3 |
+| Klawisz control+escape | spacja+punkt 1 2 3 4 5 6 |
+| Klawisz tab | spacja+punkt 3 7 |
+%kc:endInclude 
+
+++ Starsze modele Papenmeier Braille BRAILLEX ++
+Obsługiwane są następujące monitory: 
+- BRAILLEX EL 80, EL 2D-80, EL 40 P
+- BRAILLEX Tiny, 2D Screen
+-
+
+Te monitory mogą być podłączone wyłącznie przez port szeregowy.
+W związku z tym, po podłączeniu monitora, należy w Ustawieniach Brajla w NVDA wybrać użyty port.
+
+Niektóre z tych urządzeń posiadają pasek łatwego dostępu(EAB) umożliwiający intuicyjną i szybką obsługę.
+EAB może być przesunięty w czterech kierunkach, a każdy kierunek generalnie posiada dwa przełączniki.
+Naciśnięcie i przytrzymanie klawisza góra, dół, prawo i lewo (albo EAB) spowoduje powtórzenie powiązanej akcji.
+Starsze urządzenia nie posiadają EAB; zamiast tego używane są przednie klawisze.
+
+Na ogół, następujące klawisze są dostępne na tych monitorach:
+
+|| Nazwa | Klawisz skrótu |
+| l1 | lewy przedni klawisz |
+| l2 | lewy tylny klawisz |
+| r1 | prawy przedni klawisz |
+| r2 | prawy tylny klawisz |
+| up | 1 stopień w górę |
+| up2 | dwa stopnie w górę |
+| left | 1 stopień w lewo |
+| left2 | 2 stopnie w lewo |
+| right | 1 stopień w prawo |
+| right2 | 2 stopnie w prawo |
+| dn | 1 stopień w dół |
+| dn2 | 2 stopnie w dół |
+
+Poniżej znajdują się komendy Papenmeier dla NVDA:
+
+%kc:beginInclude
+Urządzenia z EAB:
+|| Działanie | Klawisz skrótu |
+| Przewiń wyświetlacz brajla wstecz | left |
+| Przewiń wyświetlacz brajla w przód | right |
+| Przenieś wyświetlacz brajla do poprzedniej linii | up |
+| Przenieś wyświetlacz brajla do następnej linii | dn |
+| Przywołaj do komórki brajla | routing |
+| Raportuj aktualny znak w punkcie przeglądu | l1 |
+| Aktywuj aktualny obiekt nawigatora | l2 |
+| Raportuj tytuł | l1+up |
+| Raportuj pasek stanu | l2+down |
+| Przejdź do obiektu nadrzędnego | up2 |
+| Przejdź do pierwszego obiektu podrzędnego | dn2 |
+| Przejdź do następnego obiektu | right2 |
+| Przejdź do poprzedniego obiektu | left2 |
+| Raportuj formatowanie tekstu | górny rząd klawiszy routingowych |
+
+BRAILLEX Tiny:
+|| Działanie | Klawisz skrótu |
+| Raportuj aktualny znak w punkcie przeglądu | l1 |
+| Aktywuj aktualny obiekt nawigatora | l2 |
+| Przewiń wyświetlacz brajla wstecz | left |
+| Przewiń wyświetlacz brajla w przód | right |
+| Przenieś wyświetlacz brajla do poprzedniej linii | up |
+| Przenieś wyświetlacz brajla do następnej linii | dn |
+| Przełącz "Brajl związany z..." | r2 |
+| Przejdź do obiektu nadrzędnego | r1+up |
+| Przejdź do pierwszego obiektu podrzędnego | r1+dn |
+| Przejdź do poprzedniego obiektu | r1+left |
+| Przejdź do następnego obiektu | r1+right |
+| Raportuj formatowanie tekstu | reportf |
+| Zgłoś tytuł | l1+up |
+| zgłoś pasek stanu | l2+down |
+
+BRAILLEX 2D Screen:
+|| Działanie | Klawisz skrótu |
+| Raportuj aktualny znak w punkcie przeglądu | l1 |
+| Aktywuj aktualny obiekt nawigatora | l2 |
+| Przełącz "Brajl związany z..." | r2 |
+| Raportuj formatowanie tekstu | reportf |
+| Przenieś wyświetlacz brajla do poprzedniej linii | up |
+| Przewiń wyświetlacz brajla wstecz | left |
+| Przewiń wyświetlacz brajla w przód | right |
+| Przenieś wyświetlacz brajla do następnej linii | dn |
+| Przejdź do następnego obiektu | left2 |
+| Przejdź do obiektu nadrzędnego | up2 |
+| Przejdź do pierwszego obiektu podrzędnego | dn2 |
+| Przejdź do poprzedniego obiektu | right2 |
+%kc:endInclude
+
+++ HumanWare BrailleNote ++
+NVDA obsługuje notatniki BrailleNote produkcji [Humanware http://www.humanware.com] używane w roli monitora brajlowskiego dla programu czytającego ekran.
+Następujące modele są obsługiwane:
+- BrailleNote Classic (tylko szeregowe połączenie)
+- BrailleNote PK (połączenie szeregowe i bluetooth)
+- BrailleNote MPower (połączenie szeregowe i bluetooth)
+- BrailleNote Apex (połączenie USB i bluetooth)
+-
+
+Jeśli twoje urządzenie obsługuje więcej niż jeden typ połączenia, podłączając notatnik do NVDA, musisz ustawić port terminala brajlowskiego w opcjach terminala brajla.
+Więcej na ten temat można znaleźć w podręczniku urządzenia.
+W NVDA może okazać się konieczne wybranie portu w ustawieniach brajla.
+Jeśli łączysz się przez USB lub bluetooth, możesz ustawić port na "automatyczny", "USB" lub "Bluetooth", zależnie od dostępnych opcji.
+Jeśli łączysz się przy użyciu portu szeregowego, (lub przejściówki USB na port szeregowy) albo jeśli nie pojawia się żadna z poprzednich opcji, musisz ręcznie wybrać używany do komunikacji port na liście portów sprzętowych.
+
+Przed podłączeniem BrailleNote Apex używając jego klienta interfejsu USB, musisz zainstalować sterowniki dostarczane przez HumanWare.
+
+Poniżej skróty klawiszowe dla BrailleNote, które działają w nvda.
+Aby odnaleźć opisywane klawisze, zajrzyj do dokumentacji urządzenia:
+
+%kc:beginInclude
+|| Działanie | Klawisz skrótu |
+| Przewiń wyświetlacz brajla wstecz | back |
+| Przewiń wyświetlacz brajla w przód | advance |
+| Przenieś wyświetlacz brajla do poprzedniej linii | previous |
+| Przenieś wyświetlacz brajla do następnej linii | next |
+| Przywołaj do komórki brajla | routing |
+| Przełącz "Brajl związany z..." | previous+next |
+| Klawisz strzałka w górę | spacja+punkt 1 |
+| Klawisz strzałka w dół | spacja+punkt 4 |
+| Klawisz strzałka w lewo | spacja+punkt 3 |
+| Klawisz strzałka w prawo | spacja+punkt 6 |
+| Klawisz Page up | spacja+punkt 1+punkt 3 |
+| Klawisz Page down | spacja+punkt 4+punkt 6 |
+| Klawisz Home | spacja+punkt 1+punkt 2 |
+| Klawisz End | spacja+punkt 4+punkt 5 |
+| Klawisz Control+home | spacja+punkt 1+punkt 2+punkt 3 |
+| Klawisz Control+end | spacja+punkt 4+punkt 5+punkt 6 |
+| Klawisz spacja | spacja |
+| Klawisz enter | spacja+punkt 8 |
+| Klawisz Backspace | spacja+punkt 7 |
+| Klawisz tab | spacja+punkt 2+punkt 3+punkt 4+punkt 5 (space+t) |
+| Klawisz Shift+tab | spacja+punkt 1+punkt 2+punkt 5+punkt 6 |
+| Klawisz windows | spacja+punkt 2+punkt 4+punkt 5+punkt 6 (space+w) |
+| Klawisz Alt | spacja+punkt 1+punkt 3+punkt 4 (space+m) |
+| Przełącz tryb pomocy | spacja+punkt 2+punkt 3+punkt 6 (spacja+obniżone h) |
+%kc:endInclude
+
+++ EcoBraille ++
+NVDA obsługuje monitory EcoBraille od [ONCE http://www.once.es/].
+Obsługiwane są następujące modele:
+- EcoBraille 20
+- EcoBraille 40
+- EcoBraille 80
+- EcoBraille Plus
+-
+
+W oknie ustawień brajla NVDA, możesz ustawić port szeregowy, do którego jest podłączony monitor.
+
+Poniżej znajdują się skróty klawiszowe dla monitorów EcoBraille.
+Proszę przeczytać [Dokumentację EcoBraille ftp://ftp.once.es/pub/utt/bibliotecnia/Lineas_Braille/ECO/] dla uzyskania informacji, gdzie znajdują się te klawisze.
+
+%kc:beginInclude
+|| Działanie | Klawisz skrótu |
+| Przewiń wyświetlacz brajla wstecz | T2 |
+| Przewiń wyświetlacz brajla w przód | T4 |
+| Przenieś wyświetlacz brajla do poprzedniej linii | T1 |
+| Przenieś wyświetlacz brajla do następnej linii | T5 |
+| Przywołaj do komórki brajla | Routing |
+| Uaktywnij bieżący obiekt nawigatora | T3 |
+| Przełącz do następnego trybu przeglądania | F1 |
+| Przejdź do obiektu nadrzędnego | F2 |
+| Przełącz do poprzedniego trybu przeglądania | F3 |
+| Przejdź do poprzedniego obiektu | F4 |
+| Zgłoś bieżący obiekt | F5 |
+| Przejdź do następnego obiektu | F6 |
+| Przejdź do obiektu w punkcie uwagi | F7 |
+| Przejdź do pierwszego obiektu podrzędnego | F8 |
+| Przenieś kursor lub punkt uwagi do aktualnej pozycji kursora przeglądu | F9 |
+| Zgłoś położenie kursora przeglądu | F0 |
+| Przełącz "Brajl związany z..." | A |
+%kc:endInclude
+
+++ BRLTTY ++
+[BRLTTY http://mielke.cc/brltty/] jest osobnym programem, który może być wykorzystany do wsparcia wielu monitorów Brajlowskich.
+Aby skorzystać z takiej możliwości, należy zainstalować [BRLTTY for Windows http://brl.thefreecat.org/brltty/].
+Należy pobrać i zainstalować najnowszy pakiet instalacyjny, który będzie się nazywać na przykład brltty-win-4.2-2.exe.
+Podczas konfiguracji monitora i używanych portów, należy zwrócić szczególną uwagę na wskazówki w przypadku korzystania z monitora USB i zainstalowania dostarczonych przez producenta sterowników.
+
+Dla monitorów z klawiaturą brajlowską, BRLTTY aktualnie sam zarządza wprowadzaniem brajla.
+W związku z tym, ustawienie w NVDA tabeli wprowadzania nie ma zastosowania.
+
+Poniżej wykaz poleceń brltty dla nvda. 
+Zobacz [tabele klawiszy w dokumentacji brltty http://mielke.cc/brltty/doc/KeyTables/] by dowiedzieć się, jak poszczególne komendy programu wywołać za pomocą klawiszy poszczególnych monitorów.
+%kc:beginInclude
+|| Działanie | komenda brltty |
+| Przewiń brajla do tyłu | fwinlt (go left one window) |
+| Przewiń brajla do przodu | fwinrt (go right one window) |
+| Przenieś monitor do poprzedniej linii | lnup (go up one line) |
+| Przenieś monitor do następnej linii | lndn (go down one line) |
+| Przywołaj do komórki brajla | route (przenieś kursor do znaku) |
+%kc:endInclude
+
++ Brajlowskie skróty typu i stanu kontrolki +
+Aby zmieścić jak najwięcej informacji na monitorze brajlowskim, zdefiniowano poniższe skróty określające typ i stan kontrolki.
+
+|| Skrót | Typ kontrolki |
+| btn | przycisk |
+| cbo | lista rozwijana |
+| chk | pole wyboru |
+| dlg | dialog |
+| edt | pole edycji tekstu |
+| gra | grafika |
+| cN | kolumna tabeli o numerze n, np. c1, c2. |
+| rN | Wiersz tabeli o numerze n, np. r1, r2. |
+| hN | nagłówek poziomu N, np. h1, h2. |
+| lnk | link |
+| lst | lista |
+| vlnk | odwiedzony link |
+| mnu | menu |
+| mnubar | pasek menu |
+| rbtn | przycisk opcji |
+| tb | tabela |
+| tv | widok drzewa |
+| lv N | widok drzewa ma chierarchiczny poziom N|
+| ``-----`` | separator |
+
+Zdefiniowano także poniższe oznaczenia stanu:
+|| Skrót | Stan kontrolki |
+| ... | wyświetlane, gdy obiekt obsługuje autouzupełnianie |
+| ( ) | wyświetlane, gdy obiekt (np. pole wyboru) jest niezaznaczony |
+| (x) | wyświetlane, gdy obiekt (np. pole wyboru) jest zaznaczony |
+| (-) | wyświetlane, gdy obiekt (np. pole wyboru) jest częściowo zaznaczony |
+| - | wyświetlane, gdy obiekt (np. drzewo) można zwinąć |
+| + | wyświetlane, gdy obiekt (np. drzewo) można rozwinąć |
+| clk | wyświetlane, gdy obiekt jest klikalny |
+| ro | wyświetlane, gdy obiekt (np. pole edycji) jest tylko do odczytu |
+| sel | wyświetlane, gdy obiekt jest wybrany |
+| submnu | wyświetlane, gdy obiekt posiada wyskakujące menu (zwykle podmenu) |
+
++ dla zaawansowanych +
+
+++ Parametry linii komend ++[CommandLineOptions]
+NVDA  akceptuje jeden lub więcej przełączników startowych, zmieniających jego zachowanie.
+Możesz podać tak wiele opcji, jak to jest potrzebne.
+Te opcje mogą być wpisane podczas uruchamiania ze skrótu  (we właściwościach skrótu), w oknie dialogowym "Uruchom"  (Menu start-> Uruchom lub Windows+r) lub w konsoli wiersza poleceń Windows.
+Opcje powinny być oddzielone spacjami od nazwy pliku wykonywalnego NVDA, oraz od innych opcji.
+Dla przykładu, skrót tworzony na pulpicie przez instalator, posiada przełącznik -r, który nakazuje NVDA zamknąć aktualnie uruchomioną kopię przed uruchomieniem nowej.
+Inny użyteczny parametr to --disable-addons, który nakazuje NVDA zawiesić wszystkie dodatki.
+Pozwala to ustalić, czy jakiś problem jest powodowany przez dodatek i szybko go naprawić.
+
+Inny przykład, to zamknięcie aktualnie uruchomionej kopii NVDA poprzez wpisanie:
+
+nvda -q
+
+Niektóre opcje występują w dwóch wersjach - krótkiej i długiej, inne tylko w długiej wersji.
+opcje posiadające krótką wersję, możesz łączyć np.:
+| nvda -rm | zakończy uruchomioną kopię NVDA i uruchomi nową z wyłączonymi dźwiękami startowymi, etc. |
+| nvda -rm --disable-addons | to samo co powyżej, ale z wyłączonymi dodatkami |
+
+Niektóre przełączniki akceptują dodatkowe ustawienia; np. jak szczegółowy powinien być tworzony log, albo ścieżkędo katalogu konfiguracyjnego użytkownika.
+Te ustawienia powinny być umieszczane po odpowiedniej opcji oddzielone spacją od krótkiej wersji przełącznika, lub znakiem równości (=) od długiej wersji, np.:
+| nvda -l 10 | Wywołuje NVDA z poziomem logowania ustawionym na Debugowanie |
+| nvda --log-file=c:\nvda.log |  Nakazuje NVDA zapisywać log do pliku c:\nvda.log |
+| nvda --log-level=20 -f c:\nvda.log | Uruchamia NVDA z poziomem logowania ustawionym na info i plikiem logu zapisywanym w c:\nvda.log |
+
+Poniżej wymieniono wszystkie opcje linii poleceń dla NVDA:
+|| Krótka | Długa | Opis |
+| -h | --help | Pokaż pomoc wiersza poleceń i wyjdź |
+| -q | --quit | Zakończ aktualnie uruchomioną kopię NVDA |
+| -r | --replace | Zakończ aktualną kopię NVDA i uruchom obecną |
+| -k | --check-running | Poinformuj kodem wyjścia, czy NVDA jest uruchomiony; 0 jeśli uruchomiony, 1 jeśli nie uruchomiony |
+| -f LOGFILENAME | --log-file=LOGFILENAME | Plik, do którego powinny być zapisywane informacje logu |
+| -l poziom | --log-level=poziom | Najniższy poziom zapisywanych informacji logu (debugowanie 10, informacje 20, ostrzeżenia 30, błędy 40, krytyczne 50), domyślnie ostrzeżenia |
+| -c ścieżka | --config-path=ścieżka | Ścieżka folderu, w którym zapisane są wszystkie ustawienia NVDA |
+| -m | --minimal | bez dźwięku, interfejsu, informacji początkowej etc |
+| -s | --secure | Tryb bezpieczny (wyłącz konsolę Pythona) |
+| Brak | --disable-addons | dodatki będą ignorowane |
+| None | --no-sr-flag  | Nie zmieniaj globalnej flagi systemowej czytnika ekranu |
+| None | --install | Po cichu instaluje NVDA i uruchamia zainstalowaną kopię |
+| Brak | --install-silent | Po cichu instaluje NVDA (nie uruchamia zainstalowanej kopii) |
+
++ Dodatkowe Informacje +
+Jeśli potrzebujesz dodatkowych informacji lub pomocy odnośnie NVDA znajdziesz ją na stronie internetowej NVDA NVDA_URL.
+Tutaj można znaleźć dodatkowe dokumenty, jak również wsparcie techniczne i zasoby społecznościowe.
+Ta strona zawiera również informacje i materiały dotyczące rozwoju NVDA. Zachęcamy również do odwiedzenia polskiej strony społeczności użytkowników NVDA pod adresem: www.nvda.pl

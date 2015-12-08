@@ -1,0 +1,196 @@
+﻿#locale/fr/symbols.dic
+#A part of NonVisual Desktop Access (NVDA)
+#Copyright (c) 2011-2014 NVDA contributors.
+#This file is covered by the GNU General Public License.
+
+complexSymbols:
+# identifier	regexp
+# Sentence endings.
+. sentence ending	((?<=[^\s.])\.(?=[\"'”’);\s]|$)|(?<=[^\s.]\s)\.(?=[\"'”’);\s]|$))
+! sentence ending	((?<=[^\s!])\!(?=[\"'”’);\s]|$)|(?<=[^\s!]\s)\!(?=[\"'”’);\s]|$))
+? sentence ending	((?<=[^\s?])\?(?=[\"'”’);\s]|$)|(?<=[^\s?]\s)\?(?=[\"'”’);\s]|$))
+... sentence ending	((?<=[^\s.])\.\.\.(?=[\"'”’);\s]|$)|(?<=[^\s.]\s)\.\.\.(?=[\"'”’);\s]|$))
+… sentence ending	((?<=[^\s…])\…(?=[\"'”’);\s]|$)|(?<=[^\s…]\s)\…(?=[\"'”’);\s]|$))
+# Phrase endings.
+; phrase ending	((?<=[^\s;]);(?=[\"'”’);\s]|$)|(?<=[^\s;]\s);(?=[\"'”’);\s]|$))
+: phrase ending	((?<=[^\s:]):(?=[\"'”’);\s]|$)|(?<=[^\s:]\s):(?=[\"'”’);\s]|$))
+# Others
+decimal point	(?<![^\d -])\,(?=\d)
+in-word '	(?<=[^\W_])['’]
+in-word -	(?<=[^\W_])[-]
+negative number	(?<!\w)-(?=[$£€¥.]?\d)
+dates .	((?<=\b\d\d)\.(?=\d\d.(\d{2}|\d{4})\b))|((?<=\b\d\d.\d\d)\.(?=(\d{2}|\d{4})\b))
+dates /	((?<=\b\d\d)\/(?=\d\d/(\d{2}|\d{4})\b))|((?<=\b\d\d/\d\d)\/(?=(\d{2}|\d{4})\b))
+
+after-number %	(?<=\d)((\%)|(\s\%))(?=\W|$)
+
+symbols:
+# identifier	replacement[[	level][	preserve]][	# display name]
+
+# Complex symbols
+. sentence ending	point	# . fin de phrase
+! sentence ending	point dexclamation	# ! fin de phrase
+? sentence ending	point dinterrogation	# ? fin de phrase
+... sentence ending	points de suspension	all	always	# ... fin de phrase
+… sentence ending	points de suspension	all	always	# … fin de phrase
+; phrase ending	point virgule	# ; fin de phrase
+: phrase ending	deux points	# : fin de phrase
+
+decimal point		# virgule décimale
+dates .	 	all	always	# point de date
+dates /	 	all	always	# barre oblique de date
+negative number	moins	none	norep	# - devant un nombre
+after-number %	pour cent	none	norep	# % après un nombre
+in-word '	apostrophe	# ' dans un mot
+in-word -	tiret	all	norep	# - dans un mot
+
+# Whitespace
+\0	nul
+\t	tab
+\n	nouvelle ligne
+\f	saut de page
+\r	retour chariot
+ 	espace
+ 	espace insécable	char	# espace insécable
+
+# Standard punctuation/symbols
+!	point dexclamation
+"	guillemet
+\#	dièse
+$	dollar
+£	livre
+€	euro
+¢	Centimes
+¥	Yen
+₹	roupi	some	norep
+%	pour cent
+&	et commercial	some	norep
+'	apostrophe
+(	parenthèse gauche
+)	parenthèse droite
+*	astérisque
++	pluce	some	norep
+,	virgule
+-	tiret
+.	point
+/	barre oblique
+:	deux points
+;	point virgule
+<	inférieur
+>	supérieur
+=	égal
+?	point dinterrogation
+¿	point dinterrogation renversé	some
+@	arobase	none
+[	crochet gauche
+]	crochet droit
+"	guillemet
+\\	barre oblique inversée
+^	accent circonflexe
+_	souligné
+`	accent grave
+{	accolade gauche
+}	accolade droite
+|	barre verticale
+~	tilde
+
+# Other characters
+•	puce
+…	points de suspension
+...	point point point
+	puce
+“	guillemet ouvert
+”	guillemet fermé
+‘	apostrophe gauche
+’	apostrophe droite
+–	tiret demicadratin
+—	tiret cadratin
+●	cercle
+¨	tréma
+‎	gauche à droite
+‏	droite à gauche
+■	carré noir
+▪	carré noir
+◾	carré noir
+◦	puce blanche
+➔	flèche droite
+§	section
+°	degré	some	norep
+«	guillemet ouvert
+»	guillemet fermé
+µ	micro
+¹	puissance 1
+²	puissance 2
+³	puissance 3
+®	marque déposée
+™	marque de fabrique
+©	Copyright
+±	Plus ou Moins
+×	fois
+÷	divisé par
+←	flèche gauche
+→	flèche droite
+✓	coché
+✔	coché
+¶	paragraphe	all
+‰	pour-mille
+„	guillemet vers le bas	none
+∞	infini	none
+	flèche gauche	some
+	flèche droite	some
+↑	flèche haut	some
+↓	flèche bas	some
+#Opérateurs Mathématiques U+2200 to U+220F
+
+∀	pour tout 
+∁	complément
+∂	différencielle partielle
+∃	il existe
+∄	il n'existe pas de
+∅	ensemble vide
+∆	incrément
+∇	NABLA
+∈	élément de
+∉	pas un élément de
+∊	petit élément de
+∋	contient comme membre
+∌	ne contient pas comme membre	none
+∍	petit contient comme membre
+∎	fin de preuve
+∏	produit n-aire
+
+# Opérateurs Mathématiques Divers
+
+∑	somme n-aire
+√	racine carrée
+∛	racine cubique
+∜	racine quatrième
+∝	proportionnel à
+∞	infini
+∟	angle droit
+∠	angle
+∥	parallèle à
+∦	non parallèle à
+∧	et logique
+∨	ou logique
+∩	intersection
+∪	union
+∫	intégrale
+∴	ainsi
+∵	parce que
+∶	RATIO
+∷	PROPORTION
+≤	inférieur ou égal à
+≥	supérieur ou égal à
+⊂	sous-ensemble de
+⊃	sur ensemble de
+⊆	est inclus dans ou est égal à
+⊇	contient ou est égal à
+
+# Fixes for some synthesizers
+ô	o circonflexe	char	norep
+Ô	o circonflexe	char	norep
+y	igrèque	char	norep
+Y	igrèque	char	norep
+À	a accent grave	char	norep
+à	a accent grave	char	norep
